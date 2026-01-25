@@ -3,17 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sudhakamal IT Solutions Pvt. Ltd.</title>
-
+  <title>Sudhakamal IT Solutions Pvt. Ltd. - End-to-End IT Services, Oracle Integration, Cloud, QA Automation</title>
   <meta name="description" content="Sudhakamal IT Solutions Pvt. Ltd. delivers end-to-end IT services, Oracle Integration Cloud, Cloud, QA Automation, Web & Mobile Development, and IT Staff Augmentation including C2C and C2H models." />
+  <meta name="keywords" content="IT solutions, Oracle Integration Cloud, QA automation, web development, mobile development, cloud services, AWS, staff augmentation, C2C, C2H, Pune IT company" />
+  <meta name="author" content="Sudhakamal IT Solutions Pvt. Ltd." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sudhakamalitsolutions.github.io/" />
+
+  <!-- Favicon - Using nav logo -->
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265" />
+
+  <!-- Open Graph for Facebook/LinkedIn sharing -->
+  <meta property="og:title" content="Sudhakamal IT Solutions Pvt. Ltd. - End-to-End IT Services" />
+  <meta property="og:description" content="Delivering end-to-end technology solutions with innovation, scalability, and skilled IT professionals. Specializing in Oracle Integration, Cloud, QA Automation, and Staff Augmentation." />
+  <meta property="og:image" content="https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265" />
+  <meta property="og:url" content="https://sudhakamalitsolutions.github.io/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sudhakamal IT Solutions Pvt. Ltd. - End-to-End IT Services" />
+  <meta name="twitter:description" content="Delivering end-to-end technology solutions with innovation, scalability, and skilled IT professionals." />
+  <meta name="twitter:image" content="https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265" />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* Base Styles */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body { background: #f9fafb; color: #334155; line-height: 1.7; }
+    body { background: #f9fafb; color: #334155; line-height: 1.7; font-size: 14px; }
 
-    /* NAVBAR */
+    /* Navbar */
     nav {
       background: #0368a6;
       position: sticky;
@@ -25,100 +45,112 @@
     .nav-container {
       max-width: 1200px;
       margin: auto;
-      padding: 12px 20px;
+      padding: 10px 15px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .nav-logo img { height: 50px; }
+    .nav-logo img { height: 40px; }
 
     nav ul {
-      display: flex;
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #0368a6;
+      flex-direction: column;
       list-style: none;
-      gap: 32px;
+      padding: 20px;
+      gap: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+
+    nav ul.active { display: flex; }
 
     nav a {
       color: #e5e7eb;
       text-decoration: none;
       font-weight: 500;
-      position: relative;
+      display: block;
+      padding: 10px 0;
     }
 
-    nav a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      width: 0;
-      height: 2px;
-      background: #38bdf8;
-      transition: width 0.3s;
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
     }
 
-    nav a:hover::after { width: 100%; }
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: #e5e7eb;
+      transition: 0.3s;
+    }
 
-    /* HERO */
+    /* Hero */
     header {
       background: linear-gradient(135deg, #0368a6, #1e293b);
       color: #fff;
-      padding: 100px 20px;
+      padding: 60px 15px;
       text-align: center;
     }
 
-    header h1 { font-size: 3.1rem; margin-bottom: 15px; }
-    header p { font-size: 1.15rem; max-width: 900px; margin: auto; }
+    header h1 { font-size: 2rem; margin-bottom: 10px; }
+    header p { font-size: 1rem; max-width: 100%; margin: auto; }
 
-    /* COMMON */
+    /* Sections */
     section {
-      padding: 80px 20px;
+      padding: 40px 15px;
       max-width: 1200px;
       margin: auto;
     }
 
     section h2 {
       text-align: center;
-      font-size: 2.3rem;
-      margin-bottom: 45px;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
       color: #0f172a;
     }
 
-    /* ABOUT */
+    /* About */
     .about p {
-      max-width: 950px;
+      max-width: 100%;
       margin: auto;
       text-align: center;
-      font-size: 1.05rem;
+      font-size: 0.95rem;
     }
 
-    /* SERVICES */
+    /* Services */
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
 
     .service-box {
       background: #fff;
-      padding: 28px;
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .service-box:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
     }
 
     .service-box h3 {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: #020617;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
-    /* TECHNOLOGIES */
+    /* Technologies */
     .tech {
       background: linear-gradient(135deg, #0368a6, #1e293b);
       color: #fff;
@@ -128,58 +160,126 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 16px;
+      gap: 10px;
       list-style: none;
     }
 
     .tech li {
       background: rgba(255,255,255,0.12);
-      padding: 10px 20px;
-      border-radius: 22px;
+      padding: 8px 15px;
+      border-radius: 15px;
       font-weight: 500;
+      font-size: 0.9rem;
     }
 
-    /* WHY US */
+    /* Why Us */
     .why-us {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
+      grid-template-columns: 1fr;
+      gap: 15px;
     }
 
     .why-box {
       background: #fff;
-      padding: 28px;
-      border-radius: 14px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
       text-align: center;
       font-weight: 500;
     }
 
-    /* MAP */
+    /* Testimonials */
+    .testimonials {
+      background: #f8fafc;
+    }
+
+    .testimonial-carousel {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .testimonial-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .testimonial-card {
+      min-width: 100%;
+      background: #ffffff;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .testimonial-card p {
+      font-size: 0.95rem;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #334155;
+    }
+
+    .testimonial-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .testimonial-card span {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    /* Carousel Controls */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #0368a6;
+      color: #fff;
+      border: none;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .carousel-btn:hover {
+      background: #02598f;
+    }
+
+    .prev-btn { left: 5px; }
+    .next-btn { right: 5px; }
+
+    /* Map */
     .map-section {
       background: #f1f5f9;
     }
 
     .map-container {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 35px;
+      grid-template-columns: 1fr;
+      gap: 25px;
       align-items: center;
     }
 
     .map-info h3 {
-      font-size: 1.9rem;
-      margin-bottom: 15px;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
       color: #0f172a;
     }
 
     .map-info a {
       display: inline-block;
-      margin-top: 18px;
-      padding: 12px 22px;
+      margin-top: 15px;
+      padding: 10px 18px;
       background: #0368a6;
       color: #fff;
-      border-radius: 6px;
+      border-radius: 5px;
       text-decoration: none;
       font-weight: 500;
       transition: background 0.3s;
@@ -189,12 +289,12 @@
 
     .map-frame iframe {
       width: 100%;
-      height: 360px;
-      border-radius: 14px;
+      height: 250px;
+      border-radius: 10px;
       border: 0;
     }
 
-    /* CONTACT */
+    /* Contact */
     .contact {
       background: linear-gradient(135deg, #0368a6, #1e293b);
       color: #fff;
@@ -211,272 +311,249 @@
       background: #0368a6;
       color: #e5e7eb;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
+      font-size: 0.85rem;
+    }
+
+    /* WhatsApp Float */
+    .whatsapp-business-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      z-index: 999;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .whatsapp-business-float svg {
+      width: 22px;
+      height: 22px;
+      fill: #fff;
+    }
+
+    .whatsapp-business-float:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+    }
+
+    @media (max-width: 480px) {
+      .whatsapp-business-float span {
+        display: none;
+      }
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      background: rgba(255,255,255,0.15);
+      padding: 8px 15px;
+      border-radius: 18px;
+      transition: background 0.3s, transform 0.3s;
       font-size: 0.9rem;
     }
-	
-	/* TESTIMONIALS */
-.testimonials {
-  background: #f8fafc;
-}
 
-.testimonial-carousel {
-  position: relative;
-  max-width: 900px;
-  margin: auto;
-  overflow: hidden;
-}
-
-.testimonial-track {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
-}
-
-.testimonial-card {
-  min-width: 100%;
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  text-align: center;
-}
-
-.testimonial-card p {
-  font-size: 1.05rem;
-  font-style: italic;
-  margin-bottom: 25px;
-  color: #334155;
-}
-
-.testimonial-card h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #0f172a;
-}
-
-.testimonial-card span {
-  font-size: 0.9rem;
-  color: #64748b;
-}
-
-/* Carousel Controls */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #0368a6;
-  color: #fff;
-  border: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-}
-
-.carousel-btn:hover {
-  background: #02598f;
-}
-
-.prev-btn { left: -20px; }
-.next-btn { right: -20px; }
-
-@media (max-width: 768px) {
-  .prev-btn { left: 5px; }
-  .next-btn { right: 5px; }
-}
-
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.2rem; }
-      .map-container { grid-template-columns: 1fr; }
+    .social-links svg {
+      width: 16px;
+      height: 16px;
+      fill: #fff;
     }
-/* EXTRA WHATSAPP BUSINESS FLOAT */
-.whatsapp-business-float {
-  position: fixed;
-  bottom: 100px; /* sits above main WhatsApp icon */
-  right: 25px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #128c7e; /* WhatsApp Business green */
-  color: #fff;
-  padding: 12px 18px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  z-index: 998;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
 
-.whatsapp-business-float svg {
-  width: 22px;
-  height: 22px;
-  fill: #fff;
-}
+    .social-links a:hover {
+      transform: translateY(-2px);
+    }
 
-.whatsapp-business-float:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
-}
+    .social-links .linkedin:hover {
+      background: #0a66c2;
+    }
 
-/* Hide label button on very small screens */
-@media (max-width: 480px) {
-  .whatsapp-business-float span {
-    display: none;
-  }
-}
+    .social-links .instagram:hover {
+      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+    }
 
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  background: rgba(255,255,255,0.15);
-  padding: 10px 18px;
-  border-radius: 22px;
-  transition: background 0.3s, transform 0.3s;
-}
+    /* Tablet and Up */
+    @media (min-width: 768px) {
+      body { font-size: 16px; }
 
-.social-links svg {
-  width: 18px;
-  height: 18px;
-  fill: #fff;
-}
+      .nav-container { padding: 12px 20px; }
+      .nav-logo img { height: 50px; }
+      nav ul { display: flex; position: static; flex-direction: row; padding: 0; gap: 32px; box-shadow: none; }
+      .hamburger { display: none; }
 
-.social-links a:hover {
-  transform: translateY(-2px);
-}
+      header { padding: 100px 20px; }
+      header h1 { font-size: 3.1rem; margin-bottom: 15px; }
+      header p { font-size: 1.15rem; max-width: 900px; }
 
-.social-links .linkedin:hover {
-  background: #0a66c2;
-}
+      section { padding: 80px 20px; }
+      section h2 { font-size: 2.3rem; margin-bottom: 45px; }
 
-.social-links .instagram:hover {
-  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
-}
+      .about p { max-width: 950px; font-size: 1.05rem; }
 
+      .services { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+      .service-box { padding: 28px; border-radius: 14px; }
+      .service-box h3 { font-size: 1.2rem; margin-bottom: 12px; }
 
+      .tech li { padding: 10px 20px; border-radius: 22px; }
+
+      .why-us { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+      .why-box { padding: 28px; border-radius: 14px; }
+
+      .testimonial-carousel { max-width: 900px; }
+      .testimonial-card { padding: 40px; border-radius: 16px; }
+      .testimonial-card p { font-size: 1.05rem; margin-bottom: 25px; }
+      .testimonial-card h4 { font-size: 1.1rem; }
+      .testimonial-card span { font-size: 0.9rem; }
+
+      .carousel-btn { width: 44px; height: 44px; font-size: 18px; }
+      .prev-btn { left: -20px; }
+      .next-btn { right: -20px; }
+
+      .map-container { grid-template-columns: 1fr 1.2fr; gap: 35px; }
+      .map-info h3 { font-size: 1.9rem; margin-bottom: 15px; }
+      .map-info a { margin-top: 18px; padding: 12px 22px; border-radius: 6px; }
+      .map-frame iframe { height: 360px; border-radius: 14px; }
+
+      footer { padding: 20px; font-size: 0.9rem; }
+
+      .whatsapp-business-float { bottom: 20px; right: 20px; }
+    }
+
+    /* Desktop and Up */
+    @media (min-width: 1024px) {
+      /* Additional enhancements if required, e.g., larger containers */
+    }
   </style>
 </head>
 
 <body>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-container">
-    <div class="nav-logo">
-      <img src="https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265" alt="Sudhakamal IT Solutions">
+  <!-- NAV -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265" alt="Sudhakamal IT Solutions">
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <!-- HERO -->
+  <header>
+    <h1>Sudhakamal IT Solutions Pvt. Ltd.</h1>
+    <p>Delivering end-to-end technology solutions with innovation, scalability, and skilled IT professionals.</p>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      Sudhakamal IT Solutions Pvt. Ltd. is a forward-thinking, service-driven IT organization delivering end-to-end
+      technology solutions across diverse domains. We specialize in software development, testing, deployment,
+      maintenance, and complete product lifecycle management.
+      <br><br>
+      We also provide IT staff augmentation and employment staffing solutions including C2C and C2H models,
+      enabling businesses to onboard skilled professionals quickly and efficiently.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+
+      <div class="service-box">
+        <h3>Web & Mobile Development</h3>
+        <p>MERN/MEAN, Java Full Stack, .NET, Python, Flutter, Android & iOS developers supporting client projects end-to-end.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Oracle Integration Cloud (OIC)</h3>
+        <p>API, SaaS (ERP, HCM, SCM), B2B integrations, and process automation with skilled OIC consultants.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Cloud & AWS Solutions</h3>
+        <p>AWS architecture, cloud migration, optimization, and managed services for scalable solutions.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>QA Automation</h3>
+        <p>Selenium, Playwright, TestNG, BDD Cucumber, API testing, and CI/CD integration.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Data, AI & ML</h3>
+        <p>Data Engineering, Data Science, and AI/ML solutions for analytics and intelligent automation.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>IT Staff Augmentation</h3>
+        <p>C2C, C2H, and project-based staffing with skilled IT professionals across technologies.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TECHNOLOGIES -->
+  <section id="technologies" class="tech">
+    <h2>Technologies We Support</h2>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#technologies">Technologies</a></li>
-      <li><a href="#why">Why Us</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li>Oracle Integration Cloud</li>
+      <li>QA Automation</li>
+      <li>Java Full Stack</li>
+      <li>MERN / MEAN</li>
+      <li>Python</li>
+      <li>Flutter</li>
+      <li>AI / ML</li>
+      <li>Data Engineering</li>
+      <li>Ruby on Rails</li>
+      <li>.NET</li>
+      <li>UI/UX Design</li>
+      <li>Business Analysis</li>
+      <li>AWS Cloud</li>
     </ul>
-  </div>
-</nav>
+  </section>
 
-<!-- HERO -->
-<header>
-  <h1>Sudhakamal IT Solutions Pvt. Ltd.</h1>
-  <p>Delivering end-to-end technology solutions with innovation, scalability, and skilled IT professionals.</p>
-</header>
-
-<!-- ABOUT -->
-<section id="about" class="about">
-  <h2>About Us</h2>
-  <p>
-    Sudhakamal IT Solutions Pvt. Ltd. is a forward-thinking, service-driven IT organization delivering end-to-end
-    technology solutions across diverse domains. We specialize in software development, testing, deployment,
-    maintenance, and complete product lifecycle management.
-    <br><br>
-    We also provide IT staff augmentation and employment staffing solutions including C2C and C2H models,
-    enabling businesses to onboard skilled professionals quickly and efficiently.
-  </p>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-
-    <div class="service-box">
-      <h3>Web & Mobile Development</h3>
-      <p>MERN/MEAN, Java Full Stack, .NET, Python, Flutter, Android & iOS developers supporting client projects end-to-end.</p>
+  <!-- WHY US -->
+  <section id="why">
+    <h2>Why Choose Sudhakamal?</h2>
+    <div class="why-us">
+      <div class="why-box">Client-centric delivery approach</div>
+      <div class="why-box">Strong technical expertise</div>
+      <div class="why-box">Flexible staffing models</div>
+      <div class="why-box">Reliable & cost-effective engagement</div>
     </div>
+  </section>
 
-    <div class="service-box">
-      <h3>Oracle Integration Cloud (OIC)</h3>
-      <p>API, SaaS (ERP, HCM, SCM), B2B integrations, and process automation with skilled OIC consultants.</p>
-    </div>
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
 
-    <div class="service-box">
-      <h3>Cloud & AWS Solutions</h3>
-      <p>AWS architecture, cloud migration, optimization, and managed services for scalable solutions.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>QA Automation</h3>
-      <p>Selenium, Playwright, TestNG, BDD Cucumber, API testing, and CI/CD integration.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>Data, AI & ML</h3>
-      <p>Data Engineering, Data Science, and AI/ML solutions for analytics and intelligent automation.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>IT Staff Augmentation</h3>
-      <p>C2C, C2H, and project-based staffing with skilled IT professionals across technologies.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- TECHNOLOGIES -->
-<section id="technologies" class="tech">
-  <h2>Technologies We Support</h2>
-  <ul>
-    <li>Oracle Integration Cloud</li>
-    <li>QA Automation</li>
-    <li>Java Full Stack</li>
-    <li>MERN / MEAN</li>
-    <li>Python</li>
-    <li>Flutter</li>
-    <li>AI / ML</li>
-    <li>Data Engineering</li>
-    <li>Ruby on Rails</li>
-    <li>.NET</li>
-    <li>UI/UX Design</li>
-    <li>Business Analysis</li>
-    <li>AWS Cloud</li>
-  </ul>
-</section>
-
-<!-- WHY US -->
-<section id="why">
-  <h2>Why Choose Sudhakamal?</h2>
-  <div class="why-us">
-    <div class="why-box">Client-centric delivery approach</div>
-    <div class="why-box">Strong technical expertise</div>
-    <div class="why-box">Flexible staffing models</div>
-    <div class="why-box">Reliable & cost-effective engagement</div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <h2>What Our Clients Say</h2>
-
-  <div class="testimonial-carousel">
-    <div class="testimonial-track" id="testimonialTrack">
+    <div class="testimonial-carousel">
+      <div class="testimonial-track" id="testimonialTrack">
 	
 	<div class="testimonial-card">
         <p>
@@ -555,14 +632,17 @@
 </section>
 
 <footer>
-  © 2026 Sudhakamal IT Solutions Pvt. Ltd. | All Rights Reserved
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+    <img src="https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265" alt="Sudhakamal IT Solutions" style="height: 30px;">
+    <span>© 2026 Sudhakamal IT Solutions Pvt. Ltd. | All Rights Reserved</span>
+  </div>
 </footer>
 
-<!-- EXTRA FLOATING WHATSAPP BUSINESS BUTTON -->
+<!-- PRIMARY FLOATING WHATSAPP BUTTON (formerly business) -->
 <a href="https://wa.me/917709603645" 
    target="_blank" 
    class="whatsapp-business-float"
-   aria-label="Chat with Sudhakamal IT Solutions on WhatsApp Business">
+   aria-label="Chat with Sudhakamal IT Solutions on WhatsApp">
   <svg viewBox="0 0 24 24">
     <path d="M20.52 3.48A11.87 11.87 0 0012 0 11.93 11.93 0 000 11.93a11.8 11.8 0 001.7 6.08L0 24l6.2-1.63a11.92 11.92 0 005.8 1.5h.01A11.93 11.93 0 0024 11.93a11.87 11.87 0 00-3.48-8.45z"/>
   </svg>
@@ -570,28 +650,76 @@
 </a>
 
 <script>
-  let currentIndex = 0;
-  const track = document.getElementById("testimonialTrack");
-  const totalSlides = track.children.length;
+    // Toggle hamburger menu
+    function toggleMenu() {
+      const ul = document.querySelector('nav ul');
+      ul.classList.toggle('active');
+    }
 
-  function updateCarousel() {
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
+    // Carousel variables
+    let currentIndex = 0;
+    const track = document.getElementById("testimonialTrack");
+    const totalSlides = track.children.length;
 
-  function nextTestimonial() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateCarousel();
-  }
+    // Update carousel position
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
 
-  function prevTestimonial() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-  }
+    // Go to next slide
+    function nextTestimonial() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+    }
 
-  // Auto-slide every 5 seconds
-  setInterval(nextTestimonial, 5000);
+    // Go to previous slide
+    function prevTestimonial() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    // Auto-slide every 5 seconds
+    setInterval(nextTestimonial, 5000);
+  </script>
+
+  <!-- Structured Data for Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Sudhakamal IT Solutions Pvt. Ltd.",
+  "url": "https://sudhakamalitsolutions.github.io/",
+  "logo": "https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265",
+  "description": "Forward-thinking IT organization delivering end-to-end technology solutions, including Oracle Integration Cloud, QA Automation, Web & Mobile Development, Cloud Services, and IT Staff Augmentation.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Siddhivinayak Complex, Office No.06, Wadgaon Shinde Road",
+    "addressLocality": "Lohegaon, Pune",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411047",
+    "addressCountry": "IN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-7709603645",
+    "contactType": "customer service",
+    "availableLanguage": "English"
+  },
+  "email": "info@sudhakamalitsolutions.com",
+  "sameAs": [
+    "https://www.linkedin.com/company/sudhakamal-it-solutions-pvt-ltd/",
+    "https://www.instagram.com/sudhakamal_it_solutions_pvt_lt/"
+  ],
+  "serviceType": [
+    "Oracle Integration Cloud",
+    "QA Automation",
+    "Web & Mobile Development",
+    "Cloud & AWS Solutions",
+    "Data, AI & ML",
+    "IT Staff Augmentation"
+  ]
+}
 </script>
-
 
 </body>
 </html>
