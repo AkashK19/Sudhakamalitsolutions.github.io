@@ -650,39 +650,48 @@
 </a>
 
 <script>
-    // Toggle hamburger menu
-    function toggleMenu() {
+  // Toggle hamburger menu
+  function toggleMenu() {
+    const ul = document.querySelector('nav ul');
+    ul.classList.toggle('active');
+  }
+
+  // Close menu when a link is clicked (for mobile)
+  const navLinks = document.querySelectorAll('nav ul a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
       const ul = document.querySelector('nav ul');
-      ul.classList.toggle('active');
-    }
+      ul.classList.remove('active');
+    });
+  });
 
-    // Carousel variables
-    let currentIndex = 0;
-    const track = document.getElementById("testimonialTrack");
-    const totalSlides = track.children.length;
+  // Carousel variables
+  let currentIndex = 0;
+  const track = document.getElementById("testimonialTrack");
+  const totalSlides = track.children.length;
 
-    // Update carousel position
-    function updateCarousel() {
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+  // Update carousel position
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
 
-    // Go to next slide
-    function nextTestimonial() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateCarousel();
-    }
+  // Go to next slide
+  function nextTestimonial() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  }
 
-    // Go to previous slide
-    function prevTestimonial() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      updateCarousel();
-    }
+  // Go to previous slide
+  function prevTestimonial() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  }
 
-    // Auto-slide every 5 seconds
-    setInterval(nextTestimonial, 5000);
-  </script>
+  // Auto-slide every 5 seconds
+  setInterval(nextTestimonial, 5000);
+</script>
 
-  <!-- Structured Data for Organization -->
+<!-- Structured Data for Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
