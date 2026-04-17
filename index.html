@@ -1,742 +1,912 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="generator" content="Sudhakamal IT Solutions Pvt. Ltd.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sudhakamal IT Solutions Pvt. Ltd. - End-to-End IT Services, Oracle Integration, Cloud, QA Automation</title>
-  <meta name="description" content="Sudhakamal IT Solutions Pvt. Ltd. delivers end-to-end IT services, Oracle Integration Cloud, Cloud, QA Automation, Web & Mobile Development, and IT Staff Augmentation including C2C and C2H models." />
-  <meta name="keywords" content="IT solutions, Oracle Integration Cloud, QA automation, web development, mobile development, cloud services, AWS, staff augmentation, C2C, C2H, Pune IT company" />
-  <meta name="author" content="Sudhakamal IT Solutions Pvt. Ltd." />
-  <meta name="robots" content="index, follow" />
- <link rel="canonical" href="https://sudhakamalitsolutions.com/" />
-
-  <!-- Favicon - Using nav logo -->
-  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265" />
-
-  <!-- Open Graph for Facebook/LinkedIn sharing -->
-  <meta property="og:title" content="Sudhakamal IT Solutions Pvt. Ltd. - End-to-End IT Services" />
-  <meta property="og:description" content="Delivering end-to-end technology solutions with innovation, scalability, and skilled IT professionals. Specializing in Oracle Integration, Cloud, QA Automation, and Staff Augmentation." />
-  <meta property="og:image" content="https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265" />
-  <meta property="og:url" content="https://sudhakamalitsolutions.com/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sudhakamal IT Solutions Pvt. Ltd. - End-to-End IT Services" />
-  <meta name="twitter:description" content="Delivering end-to-end technology solutions with innovation, scalability, and skilled IT professionals." />
-  <meta name="twitter:image" content="https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* Base Styles */
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body { background: #f9fafb; color: #334155; line-height: 1.7; font-size: 14px; }
-
-    /* Navbar */
-    nav {
-      background: #0368a6;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 10px 15px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-logo img { height: 40px; }
-
-    nav ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: #0368a6;
-      flex-direction: column;
-      list-style: none;
-      padding: 20px;
-      gap: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    nav ul.active { display: flex; }
-
-    nav a {
-      color: #e5e7eb;
-      text-decoration: none;
-      font-weight: 500;
-      display: block;
-      padding: 10px 0;
-    }
-
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 4px;
-    }
-
-    .hamburger span {
-      width: 25px;
-      height: 3px;
-      background: #e5e7eb;
-      transition: 0.3s;
-    }
-
-    /* Hero */
-    header {
-      background: linear-gradient(135deg, #0368a6, #1e293b);
-      color: #fff;
-      padding: 60px 15px;
-      text-align: center;
-    }
-
-    header h1 { font-size: 2rem; margin-bottom: 10px; }
-    header p { font-size: 1rem; max-width: 100%; margin: auto; }
-
-    /* Sections */
-    section {
-      padding: 40px 15px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    section h2 {
-      text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-      color: #0f172a;
-    }
-
-    /* About */
-    .about p {
-      max-width: 100%;
-      margin: auto;
-      text-align: center;
-      font-size: 0.95rem;
-    }
-
-    /* Services */
-    .services {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
-    .service-box {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .service-box:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-    }
-
-    .service-box h3 {
-      margin-bottom: 10px;
-      color: #020617;
-      font-size: 1.1rem;
-    }
-
-    /* Technologies */
-    .tech {
-      background: linear-gradient(135deg, #0368a6, #1e293b);
-      color: #fff;
-    }
-
-    .tech ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      list-style: none;
-    }
-
-    .tech li {
-      background: rgba(255,255,255,0.12);
-      padding: 8px 15px;
-      border-radius: 15px;
-      font-weight: 500;
-      font-size: 0.9rem;
-    }
-
-    /* Why Us */
-    .why-us {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 15px;
-    }
-
-    .why-box {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      text-align: center;
-      font-weight: 500;
-    }
-
-    /* Testimonials */
-    .testimonials {
-      background: #f8fafc;
-    }
-
-    .testimonial-carousel {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-    }
-
-    .testimonial-track {
-      display: flex;
-      transition: transform 0.6s ease-in-out;
-    }
-
-    .testimonial-card {
-      min-width: 100%;
-      background: #ffffff;
-      padding: 30px 20px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .testimonial-card p {
-      font-size: 0.95rem;
-      font-style: italic;
-      margin-bottom: 20px;
-      color: #334155;
-    }
-
-    .testimonial-card h4 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #0f172a;
-    }
-
-    .testimonial-card span {
-      font-size: 0.85rem;
-      color: #64748b;
-    }
-
-    /* Carousel Controls */
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #0368a6;
-      color: #fff;
-      border: none;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .carousel-btn:hover {
-      background: #02598f;
-    }
-
-    .prev-btn { left: 5px; }
-    .next-btn { right: 5px; }
-
-    /* Map */
-    .map-section {
-      background: #f1f5f9;
-    }
-
-    .map-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 25px;
-      align-items: center;
-    }
-
-    .map-info h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: #0f172a;
-    }
-
-    .map-info a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #0368a6;
-      color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background 0.3s;
-    }
-
-    .map-info a:hover { background: #02598f; }
-
-    .map-frame iframe {
-      width: 100%;
-      height: 250px;
-      border-radius: 10px;
-      border: 0;
-    }
-
-    /* Contact */
-    .contact {
-      background: linear-gradient(135deg, #0368a6, #1e293b);
-      color: #fff;
-      text-align: center;
-    }
-
-    .contact a {
-      color: #38bdf8;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    footer {
-      background: #0368a6;
-      color: #e5e7eb;
-      text-align: center;
-      padding: 15px;
-      font-size: 0.85rem;
-    }
-
-    /* WhatsApp Float */
-    .whatsapp-business-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: #25d366;
-      color: #fff;
-      padding: 12px 18px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-      z-index: 999;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .whatsapp-business-float svg {
-      width: 22px;
-      height: 22px;
-      fill: #fff;
-    }
-
-    .whatsapp-business-float:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.35);
-    }
-
-    @media (max-width: 480px) {
-      .whatsapp-business-float span {
-        display: none;
-      }
-    }
-
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      background: rgba(255,255,255,0.15);
-      padding: 8px 15px;
-      border-radius: 18px;
-      transition: background 0.3s, transform 0.3s;
-      font-size: 0.9rem;
-    }
-
-    .social-links svg {
-      width: 16px;
-      height: 16px;
-      fill: #fff;
-    }
-
-    .social-links a:hover {
-      transform: translateY(-2px);
-    }
-
-    .social-links .linkedin:hover {
-      background: #0a66c2;
-    }
-
-    .social-links .instagram:hover {
-      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
-    }
-
-    /* Tablet and Up */
-    @media (min-width: 768px) {
-      body { font-size: 16px; }
-
-      .nav-container { padding: 12px 20px; }
-      .nav-logo img { height: 50px; }
-      nav ul { display: flex; position: static; flex-direction: row; padding: 0; gap: 32px; box-shadow: none; }
-      .hamburger { display: none; }
-
-      header { padding: 100px 20px; }
-      header h1 { font-size: 3.1rem; margin-bottom: 15px; }
-      header p { font-size: 1.15rem; max-width: 900px; }
-
-      section { padding: 80px 20px; }
-      section h2 { font-size: 2.3rem; margin-bottom: 45px; }
-
-      .about p { max-width: 950px; font-size: 1.05rem; }
-
-      .services { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
-      .service-box { padding: 28px; border-radius: 14px; }
-      .service-box h3 { font-size: 1.2rem; margin-bottom: 12px; }
-
-      .tech li { padding: 10px 20px; border-radius: 22px; }
-
-      .why-us { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
-      .why-box { padding: 28px; border-radius: 14px; }
-
-      .testimonial-carousel { max-width: 900px; }
-      .testimonial-card { padding: 40px; border-radius: 16px; }
-      .testimonial-card p { font-size: 1.05rem; margin-bottom: 25px; }
-      .testimonial-card h4 { font-size: 1.1rem; }
-      .testimonial-card span { font-size: 0.9rem; }
-
-      .carousel-btn { width: 44px; height: 44px; font-size: 18px; }
-      .prev-btn { left: -20px; }
-      .next-btn { right: -20px; }
-
-      .map-container { grid-template-columns: 1fr 1.2fr; gap: 35px; }
-      .map-info h3 { font-size: 1.9rem; margin-bottom: 15px; }
-      .map-info a { margin-top: 18px; padding: 12px 22px; border-radius: 6px; }
-      .map-frame iframe { height: 360px; border-radius: 14px; }
-
-      footer { padding: 20px; font-size: 0.9rem; }
-
-      .whatsapp-business-float { bottom: 20px; right: 20px; }
-    }
-
-    /* Desktop and Up */
-    @media (min-width: 1024px) {
-      /* Additional enhancements if required, e.g., larger containers */
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudhakamal IT Solutions Pvt. Ltd. | End-to-End IT Services</title>
+<meta name="description" content="Sudhakamal IT Solutions Pvt. Ltd. – Delivering end-to-end technology solutions including Web & Mobile Development, Oracle Integration Cloud, AWS, QA Automation, AI/ML, and IT Staff Augmentation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<style>
+:root {
+  --ink: #080E1C;
+  --ink2: #0F1A2E;
+  --ink3: #162240;
+  --teal: #38BDF8;
+  --teal-dim: rgba(0,217,163,0.12);
+  --teal-glow: rgba(0,217,163,0.35);
+  --blue: #1A6BFF;
+  --gold: #F4B942;
+  --white: #FFFFFF;
+  --off: #F4F7FC;
+  --muted: #8A96AD;
+  --border-light: rgba(255,255,255,0.07);
+  --border-dark: rgba(0,0,0,0.07);
+  --r: 16px;
+  --r-sm: 10px;
+  --shadow: 0 8px 48px rgba(8,14,28,0.14);
+  --shadow-lg: 0 20px 80px rgba(8,14,28,0.22);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: 'Outfit', sans-serif; color: var(--ink); background: var(--off); line-height: 1.7; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+.sec { padding: 100px 0; }
+
+/* ── TYPOGRAPHY ── */
+.chip { display: inline-flex; align-items: center; gap: 8px; background: var(--teal-dim); border: 1px solid rgba(0,217,163,0.25); color: var(--teal); font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 14px; border-radius: 40px; margin-bottom: 20px; }
+.chip .dot { width: 5px; height: 5px; background: var(--teal); border-radius: 50%; animation: blink 2s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.25} }
+.heading-xl { font-family: 'Outfit', sans-serif; font-size: clamp(2.6rem, 5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.03em; }
+.heading-lg { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; line-height: 1.12; letter-spacing: -0.025em; color: var(--ink); }
+.heading-md { font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 700; line-height: 1.3; color: var(--ink); }
+.subtext { font-size: 1.05rem; color: var(--muted); max-width: 560px; line-height: 1.8; margin-bottom: 52px; }
+.accent { color: var(--teal); }
+.gold { color: var(--gold); }
+
+/* ── BUTTONS ── */
+.btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 30px; border-radius: 50px; font-family: 'Outfit', sans-serif; font-size: 0.92rem; font-weight: 700; cursor: pointer; transition: all 0.24s ease; border: none; letter-spacing: 0.01em; }
+.btn-teal { background: var(--teal); color: var(--ink); }
+.btn-teal:hover { background: #00f0b4; transform: translateY(-2px); box-shadow: 0 10px 30px var(--teal-glow); }
+.btn-ghost { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.3); }
+.btn-ghost:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-2px); }
+.btn-dark { background: var(--ink); color: var(--white); }
+.btn-dark:hover { background: var(--ink2); transform: translateY(-2px); box-shadow: var(--shadow); }
+.btn-outline-dark { background: transparent; color: var(--ink); border: 1.5px solid rgba(8,14,28,0.2); }
+.btn-outline-dark:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-2px); }
+
+/* ── NAV ── */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; transition: all 0.35s ease; }
+nav.scrolled { background: rgba(8,14,28,0.96); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-light); }
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 74px; }
+
+/* ── LOGO ── */
+.logo-link { display: flex; align-items: center; gap: 14px; }
+.logo-svg-wrap { flex-shrink: 0; }
+.logo-name { display: flex; flex-direction: column; }
+.logo-name .brand { font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--white); letter-spacing: -0.01em; line-height: 1.1; }
+.logo-name .pvt { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--teal); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; margin-top: 2px; }
+
+.nav-menu { display: flex; align-items: center; gap: 32px; }
+.nav-menu a { color: rgba(255,255,255,0.65); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; position: relative; }
+.nav-menu a::after { content:''; position:absolute; bottom:-3px; left:0; right:0; height:1.5px; background:var(--teal); transform:scaleX(0); transition:transform 0.25s ease; transform-origin:left; }
+.nav-menu a:hover { color: var(--white); }
+.nav-menu a:hover::after { transform:scaleX(1); }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
+.mobile-menu { display: none; position: fixed; inset: 0; background: var(--ink); z-index: 199; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { color: var(--white); font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 700; transition: color 0.2s; }
+.mobile-menu a:hover { color: var(--teal); }
+.mm-close { position: absolute; top: 24px; right: 28px; font-size: 2rem; color: var(--white); cursor: pointer; line-height: 1; }
+
+/* ── HERO ── */
+#hero { background: var(--ink); min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 74px; }
+.hero-canvas { position: absolute; inset: 0; pointer-events: none; }
+.hero-grid-lines { position: absolute; inset: 0; background-image: linear-gradient(rgba(0,217,163,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,217,163,0.03) 1px, transparent 1px); background-size: 64px 64px; }
+.hero-glow-1 { position: absolute; width: 700px; height: 700px; background: radial-gradient(circle, rgba(0,217,163,0.15) 0%, transparent 70%); top: -200px; right: -200px; }
+.hero-glow-2 { position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(26,107,255,0.12) 0%, transparent 70%); bottom: -150px; left: -100px; }
+.hero-noise { position: absolute; inset: 0; opacity: 0.025; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 200px 200px; }
+
+.hero-body { position: relative; z-index: 2; display: grid; grid-template-columns: 55% 45%; gap: 48px; align-items: center; padding: 90px 0; }
+.hero-eyebrow { margin-bottom: 24px; }
+.hero-title { color: var(--white); margin-bottom: 22px; }
+.hero-title em { font-style: normal; color: var(--teal); position: relative; }
+.hero-desc { font-size: 1.08rem; color: rgba(255,255,255,0.58); line-height: 1.85; margin-bottom: 38px; max-width: 500px; }
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 56px; }
+.hero-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden; }
+.kpi { padding: 20px 22px; border-right: 1px solid rgba(255,255,255,0.08); }
+.kpi:last-child { border-right: none; }
+.kpi-num { font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; color: var(--white); letter-spacing: -0.04em; }
+.kpi-num sup { font-size: 1.2rem; color: var(--teal); }
+.kpi-lbl { font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 500; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ── HERO VISUAL CARDS ── */
+.hero-visual { position: relative; height: 440px; }
+.float-card { position: absolute; background: rgba(255,255,255,0.04); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.09); border-radius: 18px; padding: 22px 22px; transition: all 0.3s; }
+.float-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(0,217,163,0.25); }
+.fc1 { width: 270px; top: 10px; right: 10px; animation: fc1anim 7s ease-in-out infinite; }
+.fc2 { width: 250px; top: 160px; left: 0; animation: fc2anim 8s ease-in-out infinite; }
+.fc3 { width: 200px; bottom: 20px; right: 40px; animation: fc3anim 6s ease-in-out infinite; }
+@keyframes fc1anim { 0%,100%{transform:translateY(0) rotate(-1.5deg)} 50%{transform:translateY(-14px) rotate(-1.5deg)} }
+@keyframes fc2anim { 0%,100%{transform:translateY(0) rotate(2deg)} 50%{transform:translateY(-10px) rotate(2deg)} }
+@keyframes fc3anim { 0%,100%{transform:translateY(0) rotate(-1deg)} 50%{transform:translateY(-12px) rotate(-1deg)} }
+.fc-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 14px; }
+.fc-icon.teal { background: rgba(0,217,163,0.15); }
+.fc-icon.blue { background: rgba(26,107,255,0.15); }
+.fc-icon.gold { background: rgba(244,185,66,0.15); }
+.fc-title { font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 5px; }
+.fc-desc { font-size: 0.76rem; color: rgba(255,255,255,0.42); line-height: 1.6; }
+.fc-tag { display: inline-block; background: rgba(0,217,163,0.15); color: var(--teal); font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; padding: 3px 10px; border-radius: 20px; margin-top: 12px; font-weight: 500; }
+
+/* ── TICKER ── */
+.ticker { background: var(--ink2); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); padding: 18px 0; overflow: hidden; }
+.ticker-track { display: flex; gap: 0; animation: ticker 35s linear infinite; white-space: nowrap; }
+@keyframes ticker { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+.ticker-item { display: inline-flex; align-items: center; gap: 10px; padding: 0 32px; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 500; color: rgba(255,255,255,0.4); letter-spacing: 0.08em; text-transform: uppercase; flex-shrink: 0; border-right: 1px solid rgba(255,255,255,0.07); }
+.ticker-item .sep { color: var(--teal); font-size: 18px; line-height: 0; }
+
+/* ── ABOUT ── */
+#about { background: var(--white); }
+.about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.about-panel { background: linear-gradient(145deg, var(--ink) 0%, var(--ink3) 100%); border-radius: 24px; padding: 48px 40px; position: relative; overflow: hidden; }
+.about-panel-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(0,217,163,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,217,163,0.05) 1px, transparent 1px); background-size: 40px 40px; }
+.about-panel-glow { position: absolute; top: -80px; right: -80px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(0,217,163,0.1) 0%, transparent 70%); }
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; position: relative; z-index: 1; }
+.stat-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 22px 18px; transition: all 0.3s; }
+.stat-box:hover { background: rgba(0,217,163,0.08); border-color: rgba(0,217,163,0.2); }
+.stat-box .val { font-family: 'Outfit', sans-serif; font-size: 2.1rem; font-weight: 900; color: var(--white); letter-spacing: -0.04em; }
+.stat-box .val span { color: var(--teal); }
+.stat-box .desc { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 4px; font-weight: 500; }
+.badge-float { position: absolute; bottom: -18px; right: -18px; background: var(--teal); color: var(--ink); border-radius: 12px; padding: 14px 18px; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.88rem; box-shadow: 0 12px 40px rgba(0,217,163,0.45); z-index: 10; }
+
+.about-copy .subtext { margin-bottom: 28px; }
+.check-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; }
+.check-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.94rem; color: #3a4561; }
+.check-icon { width: 24px; height: 24px; background: var(--teal-dim); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.check-icon svg { width: 12px; height: 12px; }
+.cin-plate { background: var(--off); border: 1px solid var(--border-dark); border-left: 3px solid var(--teal); border-radius: 8px; padding: 14px 18px; font-size: 0.82rem; color: var(--muted); margin-top: 24px; font-family: 'JetBrains Mono', monospace; }
+.cin-plate strong { color: var(--ink); }
+
+/* ── SERVICES ── */
+#services { background: var(--off); }
+.services-header { margin-bottom: 52px; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.svc { background: var(--white); border: 1px solid var(--border-dark); border-radius: var(--r); padding: 34px 28px; position: relative; overflow: hidden; transition: all 0.3s ease; cursor: default; }
+.svc::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,217,163,0.05) 0%, transparent 60%); opacity: 0; transition: opacity 0.35s; }
+.svc:hover { transform: translateY(-7px); box-shadow: var(--shadow); border-color: rgba(0,217,163,0.3); }
+.svc:hover::after { opacity: 1; }
+.svc-num { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--teal); font-weight: 500; letter-spacing: 0.1em; margin-bottom: 20px; opacity: 0.7; }
+.svc-ico { font-size: 32px; margin-bottom: 16px; line-height: 1; }
+.svc h3 { font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--ink); margin-bottom: 10px; }
+.svc p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; margin-bottom: 20px; }
+.svc-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.pill { background: var(--off); border: 1px solid var(--border-dark); border-radius: 40px; padding: 3px 12px; font-size: 0.7rem; font-weight: 600; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+.svc:hover .pill { background: var(--teal-dim); border-color: rgba(0,217,163,0.25); color: var(--ink); }
+
+/* ── TECH ── */
+#tech { background: var(--ink); }
+#tech .heading-lg { color: var(--white); }
+#tech .subtext { color: rgba(255,255,255,0.45); }
+.tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; }
+.tech-tile { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px 14px; text-align: center; transition: all 0.28s; cursor: default; }
+.tech-tile:hover { background: rgba(0,217,163,0.1); border-color: rgba(0,217,163,0.3); transform: translateY(-4px); }
+.tt-ico { font-size: 26px; margin-bottom: 10px; }
+.tt-name { font-family: 'Outfit', sans-serif; font-size: 0.78rem; font-weight: 700; color: rgba(255,255,255,0.65); }
+.tech-tile:hover .tt-name { color: var(--teal); }
+
+/* ── WHY ── */
+#why { background: var(--white); }
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.why-card { padding: 32px 28px; background: var(--off); border: 1px solid var(--border-dark); border-radius: var(--r); transition: all 0.3s; position: relative; overflow: hidden; }
+.why-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--teal); transform: scaleY(0); transform-origin: top; transition: transform 0.3s ease; }
+.why-card:hover { box-shadow: var(--shadow); background: var(--white); border-color: rgba(0,217,163,0.2); }
+.why-card:hover::before { transform: scaleY(1); }
+.why-n { font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 900; color: rgba(0,217,163,0.15); letter-spacing: -0.05em; line-height: 1; margin-bottom: 16px; }
+.why-card h3 { font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 800; color: var(--ink); margin-bottom: 10px; }
+.why-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; }
+
+/* ── TESTIMONIALS ── */
+#testimonials { background: var(--off); }
+.testi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.tcard { background: var(--white); border: 1px solid var(--border-dark); border-radius: var(--r); padding: 34px; position: relative; transition: all 0.3s; }
+.tcard:hover { box-shadow: var(--shadow); transform: translateY(-5px); border-color: rgba(0,217,163,0.2); }
+.tcard-quote { position: absolute; top: 18px; right: 24px; font-family: 'Playfair Display', serif; font-size: 5rem; color: var(--teal); opacity: 0.15; line-height: 1; }
+.stars { color: var(--gold); font-size: 13px; letter-spacing: 3px; margin-bottom: 18px; }
+.tcard-text { font-size: 0.93rem; color: #3d4a63; line-height: 1.85; margin-bottom: 26px; font-style: italic; }
+.tcard-author { display: flex; align-items: center; gap: 14px; }
+.avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--ink) 0%, var(--ink3) 100%); display: flex; align-items: center; justify-content: center; font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 800; color: var(--teal); flex-shrink: 0; }
+.tcard-name { font-family: 'Outfit', sans-serif; font-size: 0.92rem; font-weight: 800; color: var(--ink); }
+.tcard-role { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+
+/* ── CONTACT ── */
+#contact { background: var(--ink); }
+#contact .heading-lg { color: var(--white); }
+#contact .subtext { color: rgba(255,255,255,0.45); }
+.contact-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; }
+.cinfo-list { display: flex; flex-direction: column; gap: 22px; }
+.cinfo { display: flex; gap: 16px; align-items: flex-start; }
+.cinfo-ico { width: 50px; height: 50px; background: rgba(0,217,163,0.1); border: 1px solid rgba(0,217,163,0.2); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+.cinfo-lbl { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 5px; }
+.cinfo-val { color: var(--white); font-size: 0.94rem; }
+.cinfo-val a { color: var(--teal); }
+.socials { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+.social-btn { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 9px; padding: 9px 14px; font-size: 0.82rem; color: rgba(255,255,255,0.65); transition: all 0.22s; }
+.social-btn:hover { background: rgba(0,217,163,0.12); border-color: rgba(0,217,163,0.3); color: var(--teal); transform: translateY(-2px); }
+
+.cform { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 40px; }
+.cform-title { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--white); margin-bottom: 28px; }
+.frow { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.fg { margin-bottom: 16px; }
+.fg label { display: block; font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.45); margin-bottom: 8px; letter-spacing: 0.03em; font-family: 'JetBrains Mono', monospace; }
+.fg input, .fg select, .fg textarea { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 13px 16px; color: var(--white); font-family: 'Outfit', sans-serif; font-size: 0.9rem; outline: none; resize: none; transition: border-color 0.22s, background 0.22s; }
+.fg input::placeholder, .fg textarea::placeholder { color: rgba(255,255,255,0.25); }
+.fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--teal); background: rgba(0,217,163,0.05); }
+.fg select option { background: var(--ink2); color: var(--white); }
+.form-success { display: none; background: rgba(0,217,163,0.1); border: 1px solid rgba(0,217,163,0.3); border-radius: 10px; padding: 16px; color: var(--teal); font-size: 0.9rem; text-align: center; margin-top: 14px; }
+.form-note-txt { font-size: 0.74rem; color: rgba(255,255,255,0.28); margin-top: 12px; }
+
+/* ── MAP ── */
+.map-sec { background: var(--white); padding: 64px 0; }
+.map-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center; }
+.map-frame { border-radius: 20px; overflow: hidden; height: 320px; border: 1px solid var(--border-dark); box-shadow: var(--shadow); }
+.map-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+.map-info h3 { font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--ink); margin-bottom: 12px; }
+.map-info p { color: var(--muted); font-size: 0.94rem; line-height: 1.8; margin-bottom: 20px; }
+.address-box { background: var(--off); border: 1px solid var(--border-dark); border-left: 3px solid var(--teal); border-radius: 10px; padding: 18px 22px; font-size: 0.9rem; color: var(--ink); line-height: 1.85; font-style: normal; margin-bottom: 22px; }
+
+/* ── FOOTER ── */
+footer { background: #04080F; padding: 64px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 52px; }
+.footer-brand p { color: rgba(255,255,255,0.35); font-size: 0.87rem; line-height: 1.85; margin-top: 18px; max-width: 310px; }
+.footer-col h5 { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 500; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.footer-col ul li a { color: rgba(255,255,255,0.38); font-size: 0.87rem; transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--teal); }
+.footer-bar { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 26px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-bar p { color: rgba(255,255,255,0.25); font-size: 0.8rem; }
+.footer-bar .cin-text { font-family: 'JetBrains Mono', monospace; color: rgba(255,255,255,0.18); font-size: 0.7rem; }
+
+/* ── SCROLL REVEAL ── */
+.reveal { opacity: 0; transform: translateY(28px); transition: all 0.65s cubic-bezier(0.22, 0.61, 0.36, 1); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px) {
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .why-grid { grid-template-columns: repeat(2,1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media(max-width:768px) {
+  .nav-menu, .nav-right { display: none; }
+  .hamburger { display: flex; }
+  .hero-body { grid-template-columns: 1fr; text-align: center; padding: 60px 0; }
+  .hero-visual { display: none; }
+  .hero-ctas { justify-content: center; }
+  .hero-kpis { max-width: 400px; margin: 0 auto; }
+  .about-layout { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .frow { grid-template-columns: 1fr; }
+  .map-inner { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bar { flex-direction: column; text-align: center; }
+  .sec { padding: 64px 0; }
+  .subtext { margin-bottom: 36px; }
+}
+@media(max-width:480px) {
+  .container { padding: 0 20px; }
+  .hero-kpis { grid-template-columns: 1fr; }
+  .kpi { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .kpi:last-child { border-bottom: none; }
+}
+</style>
 </head>
-
 <body>
-  <!-- NAV -->
-  <nav>
-    <div class="nav-container">
-      <div class="nav-logo"><a href="/" >
-        <img src="https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265" alt="Sudhakamal IT Solutions">
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="container">
+    <div class="nav-wrap">
+      <!-- LOGO -->
+      <a href="#hero" class="logo-link">
+ <div class="logo-svg-wrap">
+		    <img src="https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265"
+     alt="Sudhakamal IT Solutions Logo"
+            <svg width="40" height="40" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="44" height="44" rx="11" fill="#00D9A3"/>
+            <!-- S letterform integrated with circuit/tech nodes -->
+            <path d="M14 16C14 13.8 15.8 12 18 12H26C28.2 12 30 13.8 30 16C30 18.2 28.2 20 26 20H18C15.8 20 14 21.8 14 24C14 26.2 15.8 28 18 28H26C28.2 28 30 26.2 30 24" stroke="#0F172A" stroke-width="3" stroke-linecap="round"/>
+            <!-- circuit dots -->
+            <circle cx="14" cy="16" r="2" fill="#0F172A"/>
+            <circle cx="30" cy="16" r="2" fill="#0F172A"/>
+            <circle cx="14" cy="24" r="2" fill="#0F172A"/>
+            <circle cx="30" cy="24" r="2" fill="#0F172A"/>
+            <!-- connecting line bottom -->
+            <path d="M18 32H26" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="18" cy="32" r="1.5" fill="#0F172A"/>
+            <circle cx="26" cy="32" r="1.5" fill="#0F172A"/>
+          </svg>
+        </div>
+        <div class="logo-name">
+          <span class="brand">Sudhakamal IT Solutions</span>
+          <span class="pvt">Private Limited · Pune</span>
+        </div>
       </a>
+
+      <div class="nav-menu">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#tech">Technologies</a>
+        <a href="#why">Why Us</a>
+        <a href="#testimonials">Clients</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav-right">
+        <a href="#contact" class="btn btn-teal" style="padding:10px 22px;font-size:0.85rem;">Get in Touch →</a>
       </div>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#technologies">Technologies</a></li>
-        <li><a href="#why">Why Us</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <div class="hamburger" id="ham">
+        <span></span><span></span><span></span>
+      </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <header>
-    <h1>Sudhakamal IT Solutions Pvt. Ltd.</h1>
-    <p>Delivering end-to-end technology solutions with innovation, scalability, and skilled IT professionals.</p>
-  </header>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <span class="mm-close" id="mmClose">✕</span>
+  <a href="#about" class="mm-lnk">About</a>
+  <a href="#services" class="mm-lnk">Services</a>
+  <a href="#tech" class="mm-lnk">Technologies</a>
+  <a href="#why" class="mm-lnk">Why Us</a>
+  <a href="#testimonials" class="mm-lnk">Clients</a>
+  <a href="#contact" class="mm-lnk">Contact</a>
+</div>
 
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>
-      Sudhakamal IT Solutions Pvt. Ltd. is a forward-thinking, service-driven IT organization delivering end-to-end
-      technology solutions across diverse domains. We specialize in software development, testing, deployment,
-      maintenance, and complete product lifecycle management.
-      <br><br>
-      We also provide IT staff augmentation and employment staffing solutions including C2C and C2H models,
-      enabling businesses to onboard skilled professionals quickly and efficiently.
-    </p>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-
-      <div class="service-box">
-        <h3>Web & Mobile Development</h3>
-        <p>MERN/MEAN, Java Full Stack, .NET, Python, Flutter, Android & iOS developers supporting client projects end-to-end.</p>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-canvas">
+    <div class="hero-grid-lines"></div>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-noise"></div>
+  </div>
+  <div class="container">
+    <div class="hero-body">
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <div class="chip"><span class="dot"></span> Empowering Your IT Journey</div>
+        </div>
+        <h1 class="heading-xl hero-title">End-to-End IT<br>Solutions <em>Built<br>for Growth</em></h1>
+        <p class="hero-desc">Sudhakamal IT Solutions delivers expert software development, Oracle integration, cloud architecture, QA automation, AI/ML, and flexible IT staffing — all under one roof in Pune, India.</p>
+        <div class="hero-ctas">
+          <a href="#services" class="btn btn-teal">Explore Services ↓</a>
+          <a href="#contact" class="btn btn-ghost">Talk to Us</a>
+        </div>
+        <div class="hero-kpis">
+          <div class="kpi">
+            <div class="kpi-num">13<sup>+</sup></div>
+            <div class="kpi-lbl">Technologies</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-num">6<sup>+</sup></div>
+            <div class="kpi-lbl">Service Areas</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-num">100<sup>%</sup></div>
+            <div class="kpi-lbl">Satisfaction</div>
+          </div>
+        </div>
       </div>
-
-      <div class="service-box">
-        <h3>Oracle Integration Cloud (OIC)</h3>
-        <p>API, SaaS (ERP, HCM, SCM), B2B integrations, and process automation with skilled OIC consultants.</p>
+      <div class="hero-visual">
+        <div class="float-card fc1">
+          <div class="fc-icon blue">☁️</div>
+          <div class="fc-title">Cloud & AWS Solutions</div>
+          <div class="fc-desc">Scalable cloud architecture, migration & managed services</div>
+          <span class="fc-tag">AWS Certified</span>
+        </div>
+        <div class="float-card fc2">
+          <div class="fc-icon teal">🔗</div>
+          <div class="fc-title">Oracle Integration Cloud</div>
+          <div class="fc-desc">API, SaaS integrations & intelligent process automation</div>
+          <span class="fc-tag">OIC Experts</span>
+        </div>
+        <div class="float-card fc3">
+          <div class="fc-icon gold">🤖</div>
+          <div class="fc-title">AI / ML & Data</div>
+          <div class="fc-desc">Intelligent automation & predictive analytics</div>
+        </div>
       </div>
-
-      <div class="service-box">
-        <h3>Cloud & AWS Solutions</h3>
-        <p>AWS architecture, cloud migration, optimization, and managed services for scalable solutions.</p>
-      </div>
-
-      <div class="service-box">
-        <h3>QA Automation</h3>
-        <p>Selenium, Playwright, TestNG, BDD Cucumber, API testing, and CI/CD integration.</p>
-      </div>
-
-      <div class="service-box">
-        <h3>Data, AI & ML</h3>
-        <p>Data Engineering, Data Science, and AI/ML solutions for analytics and intelligent automation.</p>
-      </div>
-
-      <div class="service-box">
-        <h3>IT Staff Augmentation</h3>
-        <p>C2C, C2H, and project-based staffing with skilled IT professionals across technologies.</p>
-      </div>
-
     </div>
-  </section>
-
-  <!-- TECHNOLOGIES -->
-  <section id="technologies" class="tech">
-    <h2>Technologies We Support</h2>
-    <ul>
-      <li>Oracle Integration Cloud</li>
-      <li>QA Automation</li>
-      <li>Java Full Stack</li>
-      <li>MERN / MEAN</li>
-      <li>Python</li>
-      <li>Flutter</li>
-      <li>AI / ML</li>
-      <li>Data Engineering</li>
-      <li>Ruby on Rails</li>
-      <li>.NET</li>
-      <li>UI/UX Design</li>
-      <li>Business Analysis</li>
-      <li>AWS Cloud</li>
-    </ul>
-  </section>
-
-  <!-- WHY US -->
-  <section id="why">
-    <h2>Why Choose Sudhakamal?</h2>
-    <div class="why-us">
-      <div class="why-box">Client-centric delivery approach</div>
-      <div class="why-box">Strong technical expertise</div>
-      <div class="why-box">Flexible staffing models</div>
-      <div class="why-box">Reliable & cost-effective engagement</div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <h2>What Our Clients Say</h2>
-
-    <div class="testimonial-carousel">
-      <div class="testimonial-track" id="testimonialTrack">
-	
-	<div class="testimonial-card">
-        <p>
-          “The team provided highly skilled resources on short notice. Their QA automation
-          professionals integrated seamlessly with our internal teams.”
-        </p>
-        <h4>Gourav Mourya</h4>
-        <span>Founder & Director Crystaltech Services Pvt.Ltd.</span>
-      </div>
-
-      <div class="testimonial-card">
-        <p>
-          “Sudhakamal IT Solutions delivered exactly what we needed. Their technical expertise,
-          responsiveness, and commitment to quality exceeded our expectations.”
-        </p>
-        <h4>Hrishikesh Diwate</h4>
-        <span>Managing Director at PHPD Hiring and Staffing pvt.Ltd.</span>
-      </div>
-
-      
-      <div class="testimonial-card">
-        <p>
-          “Sudhakamal IT Solutions delivered exceptional technical expertise and end-to-end support for our solar project, 
-		  along with reliable cloud and application development services. 
-		  Their professionalism, quality focus, and timely delivery made them a trusted technology partner.”
-        </p>
-        <h4>Anuj Patharkar</h4>
-        <span>Founder at Shivoham Energies & Solutions</span>
-      </div>
-
-      <div class="testimonial-card">
-        <p>
-          “Their staff augmentation model helped us scale faster with the right talent.
-          Strong communication and excellent delivery standards.”
-        </p>
-        <h4>Priya Kulkarni</h4>
-        <span>HR Director, IT Consulting Firm</span>
-      </div>
-
-    </div>
-
-    <button class="carousel-btn prev-btn" onclick="prevTestimonial()">❮</button>
-    <button class="carousel-btn next-btn" onclick="nextTestimonial()">❯</button>
   </div>
 </section>
 
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="sep">◆</span> Oracle Integration Cloud</span>
+    <span class="ticker-item"><span class="sep">◆</span> QA Automation</span>
+    <span class="ticker-item"><span class="sep">◆</span> AWS Cloud</span>
+    <span class="ticker-item"><span class="sep">◆</span> Java Full Stack</span>
+    <span class="ticker-item"><span class="sep">◆</span> MERN / MEAN</span>
+    <span class="ticker-item"><span class="sep">◆</span> Python Development</span>
+    <span class="ticker-item"><span class="sep">◆</span> Flutter Mobile</span>
+    <span class="ticker-item"><span class="sep">◆</span> AI / ML</span>
+    <span class="ticker-item"><span class="sep">◆</span> Data Engineering</span>
+    <span class="ticker-item"><span class="sep">◆</span> IT Staff Augmentation</span>
+    <span class="ticker-item"><span class="sep">◆</span> UI/UX Design</span>
+    <span class="ticker-item"><span class="sep">◆</span> .NET Development</span>
+    <span class="ticker-item"><span class="sep">◆</span> Ruby on Rails</span>
+    <!-- duplicate -->
+    <span class="ticker-item"><span class="sep">◆</span> Oracle Integration Cloud</span>
+    <span class="ticker-item"><span class="sep">◆</span> QA Automation</span>
+    <span class="ticker-item"><span class="sep">◆</span> AWS Cloud</span>
+    <span class="ticker-item"><span class="sep">◆</span> Java Full Stack</span>
+    <span class="ticker-item"><span class="sep">◆</span> MERN / MEAN</span>
+    <span class="ticker-item"><span class="sep">◆</span> Python Development</span>
+    <span class="ticker-item"><span class="sep">◆</span> Flutter Mobile</span>
+    <span class="ticker-item"><span class="sep">◆</span> AI / ML</span>
+    <span class="ticker-item"><span class="sep">◆</span> Data Engineering</span>
+    <span class="ticker-item"><span class="sep">◆</span> IT Staff Augmentation</span>
+    <span class="ticker-item"><span class="sep">◆</span> UI/UX Design</span>
+    <span class="ticker-item"><span class="sep">◆</span> .NET Development</span>
+    <span class="ticker-item"><span class="sep">◆</span> Ruby on Rails</span>
+  </div>
+</div>
 
-<!-- MAP -->
-<section class="map-section">
-  <div class="map-container">
-    <div class="map-info">
-      <h3>Our Office Location</h3>
-      <p>Siddhivinayak Complex, Office No.06, Wadgaon Shinde Road,<br>
-         Opp. Kasegaon College, Near MMIT College,<br>
-		 Near Pune International Airport,<br>
-         Lohegaon, Pune Maharashtra India – 411047</p>
-      <a href="https://www.google.com/maps/dir//Sudhakamal+IT+Solutions+Private+Limited" target="_blank">📍 Get Directions</a>
+<!-- ABOUT -->
+<section id="about" class="sec">
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-panel reveal">
+        <div class="about-panel-bg"></div>
+        <div class="about-panel-glow"></div>
+        <div class="stat-grid">
+          <div class="stat-box"><div class="val">6<span>+</span></div><div class="desc">Service Verticals</div></div>
+          <div class="stat-box"><div class="val">13<span>+</span></div><div class="desc">Technologies</div></div>
+          <div class="stat-box"><div class="val">C2C<span>/</span>C2H</div><div class="desc">Staffing Models</div></div>
+          <div class="stat-box"><div class="val">2025</div><div class="desc">Est. Pune, India</div></div>
+        </div>
+        <div class="badge-float">ROC Registered ✓</div>
+      </div>
+      <div class="about-copy reveal">
+        <div class="chip"><span class="dot"></span> About Us</div>
+        <h2 class="heading-lg" style="margin-bottom:16px;">A Forward-Thinking<br>IT Partner</h2>
+        <p class="subtext">Sudhakamal IT Solutions Pvt. Ltd. is a service-driven technology organization delivering complete IT solutions across diverse domains — from development to staffing, all under one roof.</p>
+        <ul class="check-list">
+          <li>
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#00D9A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            End-to-end software development, testing, deployment & maintenance
+          </li>
+          <li>
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#00D9A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Complete product lifecycle management across all stages
+          </li>
+          <li>
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#00D9A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            IT staff augmentation via C2C and C2H engagement models
+          </li>
+          <li>
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#00D9A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Rapid onboarding of skilled IT professionals for client teams
+          </li>
+          <li>
+            <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#00D9A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Client-centric delivery with strong technical expertise and accountability
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn-dark">Work With Us →</a>
+        <div class="cin-plate" style="margin-top:24px;"><strong>CIN:</strong> U62012PN2025PTC243363 &nbsp;|&nbsp; <strong>Director:</strong> Akash Balaji Kandharkar</div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="map-frame">
-      <iframe src="https://www.google.com/maps?q=Sudhakamal+IT+Solutions+Private+Limited,+Lohegaon,+Pune&output=embed"></iframe>
+<!-- SERVICES -->
+<section id="services" class="sec">
+  <div class="container">
+    <div class="services-header reveal">
+      <div class="chip"><span class="dot"></span> Our Services</div>
+      <h2 class="heading-lg" style="margin-bottom:14px;">What We Deliver</h2>
+      <p class="subtext">Comprehensive technology services designed to solve real business problems and accelerate your digital transformation.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc reveal">
+        <div class="svc-num">01 / 06</div>
+        <div class="svc-ico">💻</div>
+        <h3>Web & Mobile Development</h3>
+        <p>Full-stack development across MERN, MEAN, Java, .NET, Python, Flutter, Android & iOS — supporting client projects end-to-end.</p>
+        <div class="svc-pills">
+          <span class="pill">MERN/MEAN</span><span class="pill">Java</span><span class="pill">.NET</span><span class="pill">Python</span><span class="pill">Flutter</span><span class="pill">iOS/Android</span>
+        </div>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-num">02 / 06</div>
+        <div class="svc-ico">🔗</div>
+        <h3>Oracle Integration Cloud</h3>
+        <p>API, SaaS (ERP, HCM, SCM), B2B integrations, and intelligent process automation with skilled OIC consultants.</p>
+        <div class="svc-pills">
+          <span class="pill">OIC</span><span class="pill">ERP</span><span class="pill">HCM</span><span class="pill">SCM</span><span class="pill">B2B</span>
+        </div>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-num">03 / 06</div>
+        <div class="svc-ico">☁️</div>
+        <h3>Cloud & AWS Solutions</h3>
+        <p>AWS architecture design, cloud migration, performance optimization, and fully managed cloud services for scalable workloads.</p>
+        <div class="svc-pills">
+          <span class="pill">AWS</span><span class="pill">Architecture</span><span class="pill">Migration</span><span class="pill">Managed</span>
+        </div>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-num">04 / 06</div>
+        <div class="svc-ico">🧪</div>
+        <h3>QA Automation</h3>
+        <p>Selenium, Playwright, TestNG, BDD Cucumber, API testing, and seamless CI/CD pipeline integration for quality at speed.</p>
+        <div class="svc-pills">
+          <span class="pill">Selenium</span><span class="pill">Playwright</span><span class="pill">TestNG</span><span class="pill">BDD</span><span class="pill">CI/CD</span>
+        </div>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-num">05 / 06</div>
+        <div class="svc-ico">🤖</div>
+        <h3>Data, AI & ML</h3>
+        <p>Data Engineering pipelines, Data Science solutions, and AI/ML models for analytics, forecasting, and intelligent automation.</p>
+        <div class="svc-pills">
+          <span class="pill">Data Engg</span><span class="pill">AI/ML</span><span class="pill">Analytics</span>
+        </div>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-num">06 / 06</div>
+        <div class="svc-ico">👥</div>
+        <h3>IT Staff Augmentation</h3>
+        <p>C2C, C2H, and project-based staffing with thoroughly vetted IT professionals across all technology stacks and roles.</p>
+        <div class="svc-pills">
+          <span class="pill">C2C</span><span class="pill">C2H</span><span class="pill">Contract</span><span class="pill">Project</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH -->
+<section id="tech" class="sec">
+  <div class="container">
+    <div class="reveal">
+      <div class="chip" style="background:rgba(0,217,163,0.1);border-color:rgba(0,217,163,0.2);"><span class="dot"></span> Tech Stack</div>
+      <h2 class="heading-lg" style="margin-bottom:14px;">Technologies We Support</h2>
+      <p class="subtext">Our consultants bring deep expertise across the most in-demand platforms and frameworks.</p>
+    </div>
+    <div class="tech-grid reveal">
+      <div class="tech-tile"><div class="tt-ico">🔗</div><div class="tt-name">Oracle OIC</div></div>
+      <div class="tech-tile"><div class="tt-ico">🧪</div><div class="tt-name">QA Automation</div></div>
+      <div class="tech-tile"><div class="tt-ico">☕</div><div class="tt-name">Java Full Stack</div></div>
+      <div class="tech-tile"><div class="tt-ico">⚡</div><div class="tt-name">MERN / MEAN</div></div>
+      <div class="tech-tile"><div class="tt-ico">🐍</div><div class="tt-name">Python</div></div>
+      <div class="tech-tile"><div class="tt-ico">📱</div><div class="tt-name">Flutter</div></div>
+      <div class="tech-tile"><div class="tt-ico">🤖</div><div class="tt-name">AI / ML</div></div>
+      <div class="tech-tile"><div class="tt-ico">📊</div><div class="tt-name">Data Engineering</div></div>
+      <div class="tech-tile"><div class="tt-ico">💎</div><div class="tt-name">Ruby on Rails</div></div>
+      <div class="tech-tile"><div class="tt-ico">🔷</div><div class="tt-name">.NET</div></div>
+      <div class="tech-tile"><div class="tt-ico">🎨</div><div class="tt-name">UI/UX Design</div></div>
+      <div class="tech-tile"><div class="tt-ico">📋</div><div class="tt-name">Business Analysis</div></div>
+      <div class="tech-tile"><div class="tt-ico">☁️</div><div class="tt-name">AWS Cloud</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="sec">
+  <div class="container">
+    <div class="reveal">
+      <div class="chip"><span class="dot"></span> Why Choose Us</div>
+      <h2 class="heading-lg" style="margin-bottom:14px;">The Sudhakamal IT Solutions Advantage</h2>
+      <p class="subtext">We combine technical excellence with a people-first approach to deliver results you can count on.</p>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-card">
+        <div class="why-n">01</div>
+        <h3>Client-Centric Delivery</h3>
+        <p>Every engagement is shaped around your specific goals, timelines, and technical landscape — not a one-size-fits-all approach.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-n">02</div>
+        <h3>Strong Technical Expertise</h3>
+        <p>Our consultants bring hands-on, production-level expertise across diverse technology stacks and enterprise platforms.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-n">03</div>
+        <h3>Flexible Staffing Models</h3>
+        <p>Choose from C2C, C2H, project-based, or dedicated resource models to scale your team exactly as your business demands.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-n">04</div>
+        <h3>Reliable & Cost-Effective</h3>
+        <p>We deliver enterprise-quality outcomes at competitive pricing, ensuring strong ROI and long-term partnership value.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-n">05</div>
+        <h3>Rapid Onboarding</h3>
+        <p>Our pre-vetted talent pool ensures skilled professionals integrate into your teams quickly — minimizing ramp-up time.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-n">06</div>
+        <h3>End-to-End Ownership</h3>
+        <p>From requirement gathering to deployment and maintenance — we own the full lifecycle so you can focus on your business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="sec">
+  <div class="container">
+    <div class="reveal">
+      <div class="chip"><span class="dot"></span> Client Reviews</div>
+      <h2 class="heading-lg" style="margin-bottom:14px;">What Our Clients Say</h2>
+      <p class="subtext">Real feedback from businesses and leaders who trust Sudhakamal IT Solutions.</p>
+    </div>
+    <div class="testi-grid reveal">
+      <div class="tcard">
+        <div class="tcard-quote">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="tcard-text">The team provided highly skilled resources on short notice. Their QA automation professionals integrated seamlessly with our internal teams and delivered outstanding results.</p>
+        <div class="tcard-author">
+          <div class="avatar">GM</div>
+          <div>
+            <div class="tcard-name">Gourav Mourya</div>
+            <div class="tcard-role">Founder & Director, Crystaltech Services Pvt. Ltd.</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-quote">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="tcard-text">Sudhakamal IT Solutions delivered exactly what we needed. Their technical expertise, responsiveness, and commitment to quality exceeded our expectations at every stage.</p>
+        <div class="tcard-author">
+          <div class="avatar">HD</div>
+          <div>
+            <div class="tcard-name">Hrishikesh Diwate</div>
+            <div class="tcard-role">Managing Director, PHPD Hiring and Staffing Pvt. Ltd.</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-quote">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="tcard-text">Sudhakamal IT Solutions delivered exceptional technical expertise and end-to-end support for our solar project, along with reliable cloud and application development services. Their professionalism made them a trusted technology partner.</p>
+        <div class="tcard-author">
+          <div class="avatar">AP</div>
+          <div>
+            <div class="tcard-name">Anuj Patharkar</div>
+            <div class="tcard-role">Founder, Shivoham Energies & Solutions</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>Email: <a href="mailto:info@sudhakamalitsolutions.com">info@sudhakamalitsolutions.com</a></p>
-  <p>Phone: +91 7709603645</p>
-<div class="social-links">
-  <a href="https://www.linkedin.com/company/sudhakamal-it-solutions-pvt-ltd/" target="_blank">LinkedIn</a>
-  <a href="https://www.instagram.com/sudhakamal_it_solutions_pvt_lt/" target="_blank">Instagram</a>
-</div>
+<section id="contact" class="sec">
+  <div class="container">
+    <div class="reveal">
+      <div class="chip" style="background:rgba(0,217,163,0.1);border-color:rgba(0,217,163,0.2);"><span class="dot"></span> Get In Touch</div>
+      <h2 class="heading-lg" style="margin-bottom:14px;">Let's Start a Conversation</h2>
+      <p class="subtext">Whether you need a dedicated team, a specific consultant, or a full project solution — we're ready to help.</p>
+    </div>
+    <div class="contact-layout reveal">
+      <div class="cinfo-list">
+        <div class="cinfo">
+          <div class="cinfo-ico">📧</div>
+          <div>
+            <div class="cinfo-lbl">Email</div>
+            <div class="cinfo-val"><a href="mailto:info@sudhakamalitsolutions.com">info@sudhakamalitsolutions.com</a></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cinfo-ico">📞</div>
+          <div>
+            <div class="cinfo-lbl">Phone / WhatsApp</div>
+            <div class="cinfo-val"><a href="tel:+917709603645" style="color:var(--teal)">+91 7709603645</a></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cinfo-ico">📍</div>
+          <div>
+            <div class="cinfo-lbl">Office Address</div>
+            <div class="cinfo-val">Siddhivinayak Complex, Office No.06, Wadgaon Shinde Road, Opp. Kasegaon College, Near MMIT College &amp; Pune International Airport, Lohegaon, Pune – 411047</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cinfo-ico">🌐</div>
+          <div>
+            <div class="cinfo-lbl">Follow Us</div>
+            <div class="cinfo-val">
+              <div class="socials">
+                <a href="https://www.linkedin.com/company/sudhakamal-it-solutions-pvt-ltd/" target="_blank" class="social-btn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                  LinkedIn
+                </a>
+                <a href="https://www.instagram.com/sudhakamal_it_solutions_pvt_lt/" target="_blank" class="social-btn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                  Instagram
+                </a>
+                <a href="https://wa.me/917709603645" target="_blank" class="social-btn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.549 4.113 1.51 5.845L.057 23.5l5.797-1.52A11.93 11.93 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.562 16.604c-.247.694-1.435 1.328-2.006 1.413-.51.077-1.159.109-1.871-.118-.432-.136-.985-.319-1.694-.625-2.981-1.287-4.928-4.289-5.077-4.487-.148-.199-1.213-1.612-1.213-3.074 0-1.463.768-2.182 1.04-2.479.272-.298.594-.372.792-.372.199 0 .397.002.57.01.182.01.427-.069.669.51.247.595.841 2.058.916 2.207.1.149.149.323.025.52-.1.199-.149.323-.298.497-.148.173-.312.387-.446.52-.148.148-.303.309-.13.606.173.298.77 1.271 1.653 2.059 1.135 1.012 2.093 1.325 2.39 1.475.297.148.471.124.644-.075.173-.198.743-.867.94-1.164.199-.298.397-.249.67-.15.272.1 1.733.818 2.03.967.298.149.496.223.57.347.075.124.075.719-.173 1.413z"/></svg>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="cform">
+        <div class="cform-title">Send Us a Message</div>
+        <div class="frow">
+          <div class="fg">
+            <label>YOUR NAME *</label>
+            <input type="text" id="fname" placeholder="Rahul Sharma" required>
+          </div>
+          <div class="fg">
+            <label>COMPANY NAME</label>
+            <input type="text" id="fcompany" placeholder="Acme Corp">
+          </div>
+        </div>
+        <div class="frow">
+          <div class="fg">
+            <label>EMAIL ADDRESS *</label>
+            <input type="email" id="femail" placeholder="rahul@company.com" required>
+          </div>
+          <div class="fg">
+            <label>PHONE NUMBER</label>
+            <input type="tel" id="fphone" placeholder="+91 98765 43210">
+          </div>
+        </div>
+        <div class="fg">
+          <label>SERVICE INTERESTED IN</label>
+          <select id="fservice">
+            <option value="">Select a service...</option>
+            <option>Web & Mobile Development</option>
+            <option>Oracle Integration Cloud (OIC)</option>
+            <option>Cloud & AWS Solutions</option>
+            <option>QA Automation</option>
+            <option>Data, AI & ML</option>
+            <option>IT Staff Augmentation</option>
+            <option>Other / General Inquiry</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>YOUR MESSAGE *</label>
+          <textarea id="fmessage" rows="4" placeholder="Tell us about your project or requirement..." required></textarea>
+        </div>
+        <button class="btn btn-teal" onclick="handleSubmit()" style="width:100%;justify-content:center;font-size:1rem;padding:15px 24px;">Send Message →</button>
+        <div class="form-success" id="formSuccess">✓ Thank you! We'll get back to you within 1 business day.</div>
+        <p class="form-note-txt">By submitting, you agree to be contacted by Sudhakamal IT Solutions. We respect your privacy.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- MAP -->
+<div class="map-sec">
+  <div class="container">
+    <div class="map-inner reveal">
+      <div class="map-info">
+        <h3>Find Our Office</h3>
+        <p>We're located near Pune International Airport in Lohegaon — easily accessible from across Pune and Pimpri-Chinchwad.</p>
+        <address class="address-box">
+          Siddhivinayak Complex, Office No. 06<br>
+          Wadgaon Shinde Road, Opp. Kasegaon College<br>
+          Near MMIT College, Near Pune International Airport<br>
+          Lohegaon, Pune, Maharashtra – 411047
+        </address>
+        <a href="https://www.google.com/maps/dir//Sudhakamal+IT+Solutions+Private+Limited" target="_blank" class="btn btn-dark">📍 Get Directions →</a>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.3!2d73.90!3d18.58!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDM0JzQ5LjMiTiA3M8KwNTMnNTQuMiJF!5e0!3m2!1sen!2sin!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Sudhakamal IT Solutions Office Location"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
-  <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-    <img src="https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265" alt="Sudhakamal IT Solutions" style="height: 30px;">
-    <span>© 2026 Sudhakamal IT Solutions Pvt. Ltd. | All Rights Reserved</span>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="logo-link">
+          <div class="logo-svg-wrap">
+		    <img src="https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265"
+     alt="Sudhakamal IT Solutions Logo"
+            <svg width="40" height="40" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="11" fill="#00D9A3"/>
+              <path d="M14 16C14 13.8 15.8 12 18 12H26C28.2 12 30 13.8 30 16C30 18.2 28.2 20 26 20H18C15.8 20 14 21.8 14 24C14 26.2 15.8 28 18 28H26C28.2 28 30 26.2 30 24" stroke="#080E1C" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="14" cy="16" r="2" fill="#080E1C"/>
+              <circle cx="30" cy="16" r="2" fill="#080E1C"/>
+              <circle cx="14" cy="24" r="2" fill="#080E1C"/>
+              <circle cx="30" cy="24" r="2" fill="#080E1C"/>
+              <path d="M18 32H26" stroke="#080E1C" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="18" cy="32" r="1.5" fill="#080E1C"/>
+              <circle cx="26" cy="32" r="1.5" fill="#080E1C"/>
+            </svg>
+          </div>
+          <div class="logo-name">
+            <span class="brand">Sudhakamal IT Solutions</span>
+            <span class="pvt">Private Limited</span>
+          </div>
+        </a>
+        <p>Delivering end-to-end technology solutions with innovation, scalability, and skilled IT professionals — empowering your IT journey from Pune, India.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Web & Mobile Dev</a></li>
+          <li><a href="#services">Oracle Integration</a></li>
+          <li><a href="#services">Cloud & AWS</a></li>
+          <li><a href="#services">QA Automation</a></li>
+          <li><a href="#services">AI / ML</a></li>
+          <li><a href="#services">Staff Augmentation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#why">Why Sudhakamal IT Solutions</a></li>
+          <li><a href="#testimonials">Client Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://www.linkedin.com/company/sudhakamal-it-solutions-pvt-ltd/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/sudhakamal_it_solutions_pvt_lt/" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@sudhakamalitsolutions.com">info@sudhakamalitsolutions.com</a></li>
+          <li><a href="tel:+917709603645">+91 7709603645</a></li>
+          <li><a href="https://wa.me/917709603645" target="_blank">WhatsApp Us</a></li>
+          <li><a href="#contact">Send a Message</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p>© 2026 Sudhakamal IT Solutions Pvt. Ltd. All Rights Reserved.</p>
+      <p class="cin-text">CIN: U62012PN2025PTC243363 · ROC Pune, Maharashtra</p>
+    </div>
   </div>
 </footer>
 
-<!-- PRIMARY FLOATING WHATSAPP BUTTON (formerly business) -->
-<a href="https://wa.me/917709603645" 
-   target="_blank" 
-   class="whatsapp-business-float"
-   aria-label="Chat with Sudhakamal IT Solutions on WhatsApp">
-  <svg viewBox="0 0 24 24">
-    <path d="M20.52 3.48A11.87 11.87 0 0012 0 11.93 11.93 0 000 11.93a11.8 11.8 0 001.7 6.08L0 24l6.2-1.63a11.92 11.92 0 005.8 1.5h.01A11.93 11.93 0 0024 11.93a11.87 11.87 0 00-3.48-8.45z"/>
-  </svg>
-  <span>WhatsApp</span>
-</a>
-
 <script>
-  // Toggle hamburger menu
-  function toggleMenu() {
-    const ul = document.querySelector('nav ul');
-    ul.classList.toggle('active');
+  // Always show nav bg
+  const nav = document.getElementById('mainNav');
+  nav.classList.add('scrolled');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 30));
+
+  // Mobile menu
+  document.getElementById('ham').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
+  document.getElementById('mmClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+  document.querySelectorAll('.mm-lnk').forEach(l => l.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open')));
+
+  // Scroll reveal
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) setTimeout(() => e.target.classList.add('in'), i * 90);
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+  // Contact form
+  function handleSubmit() {
+    const name = document.getElementById('fname').value.trim();
+    const email = document.getElementById('femail').value.trim();
+    const msg = document.getElementById('fmessage').value.trim();
+    if (!name || !email || !msg) { alert('Please fill in the required fields (Name, Email, Message).'); return; }
+    const mailtoLink = `mailto:info@sudhakamalitsolutions.com?subject=Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + msg)}`;
+    window.location.href = mailtoLink;
+    document.getElementById('formSuccess').style.display = 'block';
   }
 
-  // Close menu when a link is clicked (for mobile)
-  const navLinks = document.querySelectorAll('nav ul a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      const ul = document.querySelector('nav ul');
-      ul.classList.remove('active');
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id === '#') return;
+      const el = document.querySelector(id);
+      if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
     });
   });
-
-  // Carousel variables
-  let currentIndex = 0;
-  const track = document.getElementById("testimonialTrack");
-  const totalSlides = track.children.length;
-
-  // Update carousel position
-  function updateCarousel() {
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
-
-  // Go to next slide
-  function nextTestimonial() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateCarousel();
-  }
-
-  // Go to previous slide
-  function prevTestimonial() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-  }
-
-  // Auto-slide every 5 seconds
-  setInterval(nextTestimonial, 5000);
 </script>
-
-<!-- Structured Data for Organization -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Sudhakamal IT Solutions Pvt. Ltd.",
-  "url": "https://sudhakamalitsolutions.com/",
-  "logo": "https://lh3.googleusercontent.com/7TxVOsjuy2hLpGFCgMXxC0uwSobttm0TV_RZ0da-FiHbZZI2HaIVyKwpGTuT3y1Dinmhhli34n29BSWT=s265-w265-h265",
-  "description": "Forward-thinking IT organization delivering end-to-end technology solutions, including Oracle Integration Cloud, QA Automation, Web & Mobile Development, Cloud Services, and IT Staff Augmentation.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Siddhivinayak Complex, Office No.06, Wadgaon Shinde Road",
-    "addressLocality": "Lohegaon, Pune",
-    "addressRegion": "Maharashtra",
-    "postalCode": "411047",
-    "addressCountry": "IN"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+91-7709603645",
-    "contactType": "customer service",
-    "availableLanguage": "English"
-  },
-  "email": "info@sudhakamalitsolutions.com",
-  "sameAs": [
-    "https://www.linkedin.com/company/sudhakamal-it-solutions-pvt-ltd/",
-    "https://www.instagram.com/sudhakamal_it_solutions_pvt_lt/"
-  ],
-  "serviceType": [
-    "Oracle Integration Cloud",
-    "QA Automation",
-    "Web & Mobile Development",
-    "Cloud & AWS Solutions",
-    "Data, AI & ML",
-    "IT Staff Augmentation"
-  ]
-}
-</script>
-
 </body>
 </html>
-
-
-
-
-
-
