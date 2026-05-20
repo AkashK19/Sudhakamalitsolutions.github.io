@@ -54,4 +54,4 @@ This website is hosted on GitHub Pages. To run locally or contribute:
 3. For development, use a local server (e.g., Live Server in VS Code) to test responsiveness and features.
 
 ## License
-© 2026 Sudhakamal IT Solutions Pvt. Ltd. All Rights Reserved.
+© 2025 Sudhakamal IT Solutions Pvt. Ltd. All Rights Reserved.
