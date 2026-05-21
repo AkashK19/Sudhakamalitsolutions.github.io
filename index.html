@@ -265,13 +265,14 @@ section{scroll-behavior:smooth;}
         </div>
         <div class="item">
           <div class="service-box">
-            <span class="bottom25"><i class="fa fa-laptop"></i></span>
+            <span class="bottom25"><i class="fa fa-users"></i></span>
             <h4 class="bottom10">
-              <a href="javascript:void(0)">Cloud & AWS Solutions</a>
+              <a href="javascript:void(0)">IT Staff Augmentation</a>
             </h4>
             <p>
-              We provide comprehensive cloud and AWS solutions to help
-              businesses scale and optimize their infrastructure.
+              We provide skilled IT professionals on demand to seamlessly
+              extend your team, accelerate delivery, and meet evolving
+              project needs.
             </p>
           </div>
         </div>
@@ -757,7 +758,7 @@ section{scroll-behavior:smooth;}
 <a class="button btnsecondary top10" href="https://www.google.com/maps/dir//Sudhakamal+IT+Solutions+Private+Limited" target="_blank">📍 Get Directions</a>
 </div>
 <div class="col-md-7 col-sm-12 margin_bottom wow fadeInRight" data-wow-delay="350ms">
-<form class="getin_form" onsubmit="return false;">
+<form class="getin_form" id="contactForm" onsubmit="sendEmail(event)">
 <div class="row">
 <div class="col-sm-12" id="result"></div>
 <div class="col-md-6 col-sm-6">
@@ -804,6 +805,75 @@ section{scroll-behavior:smooth;}
 </div>
 </div>
 </form>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // ─── EmailJS Configuration ───────────────────────────────────────────────
+  var EMAILJS_PUBLIC_KEY  = "jw0O0IpjdZTVa0yT4";
+  var EMAILJS_SERVICE_ID  = "service_v2aa30b";
+  var EMAILJS_TEMPLATE_ID = "template_c74nx1t";
+  // ─────────────────────────────────────────────────────────────────────────
+
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    var btn       = document.getElementById("submit_btn");
+    var resultDiv = document.getElementById("result");
+
+    // Basic validation
+    var name    = document.getElementById("first_name").value.trim();
+    var email   = document.getElementById("email").value.trim();
+    var message = document.getElementById("message").value.trim();
+    if (!name || !email || !message) {
+      showResult("error", "Please fill in all required fields.");
+      return;
+    }
+
+    // Loading state
+    btn.disabled    = true;
+    btn.textContent = "Sending…";
+    resultDiv.innerHTML = "";
+
+    var templateParams = {
+      from_name : name,
+      company   : document.getElementById("company").value.trim(),
+      from_email: email,
+      phone     : document.getElementById("phone").value.trim(),
+      service   : document.getElementById("service").value || "Not specified",
+      message   : message
+    };
+
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+      .then(function() {
+        showResult("success", "✅ Thank you! Your message has been sent. We'll be in touch shortly.");
+        document.getElementById("contactForm").reset();
+      })
+      .catch(function(err) {
+        console.error("EmailJS error:", err);
+        var errMsg = (err && err.text) ? err.text : (err && err.status ? "Status " + err.status : JSON.stringify(err));
+        showResult("error", "❌ Error: " + errMsg);
+      })
+      .finally(function() {
+        btn.disabled    = false;
+        btn.textContent = "Send Message →";
+      });
+  }
+
+  function showResult(type, msg) {
+    var resultDiv = document.getElementById("result");
+    var bg    = type === "success" ? "#d4edda" : "#f8d7da";
+    var color = type === "success" ? "#155724" : "#721c24";
+    var border= type === "success" ? "#c3e6cb" : "#f5c6cb";
+    resultDiv.innerHTML =
+      '<div style="padding:12px 16px;margin-bottom:20px;border-radius:6px;' +
+      'background:' + bg + ';color:' + color + ';border:1px solid ' + border + ';font-weight:600;">' +
+      msg + '</div>';
+    resultDiv.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+</script>
 </div>
 </div>
 <!-- Map -->
