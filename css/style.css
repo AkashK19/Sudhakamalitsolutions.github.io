@@ -1198,12 +1198,14 @@ i::after {
 .side-menu .btn-close::before,
 .side-menu .btn-close::after {
   position: absolute;
-  left: 16px;
+  left: 50%;
+  margin-left: -1px;
   content: " ";
-  height: 24px;
+  height: 22px;
   width: 2px;
   background: #fff;
-  top: 5px;
+  top: 50%;
+  margin-top: -11px;
 }
 .side-menu .btn-close:before {
   -webkit-transform: rotate(45deg);
@@ -1228,6 +1230,7 @@ i::after {
   margin-right: 1rem;
   position: absolute;
   right: 15px;
+  z-index: 10;
 }
 .sidemenu_btn.left {
   left: 15px;
@@ -1453,6 +1456,11 @@ i::after {
     position: relative;
   }
 }
+@media (min-width: 992px) {
+  .sidemenu_btn {
+    display: none !important;
+  }
+}
 @media (max-width: 992px) {
   .boxed-nav {
     background: #fff;
@@ -1667,6 +1675,8 @@ s .vertical-dot .owl-dots .owl-dot {
   padding-bottom: 25px;
 }
 #services-slider .service-box {
+  transform: scale(0.88);
+  opacity: 0.75;
   position: relative;
   padding: 3rem 1rem;
   background: #00bcd4;
@@ -1735,6 +1745,15 @@ s .vertical-dot .owl-dots .owl-dot {
   background: #643094;
   padding: 4.5rem 1rem;
   margin-top: -25px;
+  transform: scale(1);
+  opacity: 1;
+}
+
+#services-slider .owl-item:not(.center) .service-box {
+  transform: scale(0.88);
+  opacity: 0.75;
+  margin-top: 0;
+  padding: 3rem 1rem;
 }
 #services-slider .service-box:hover::before {
   opacity: 1;
@@ -4449,8 +4468,39 @@ footer .copyrights > a:focus {
   justify-content: center;
   display: flex;
   align-items: center;
-  height: 100%;
-  padding: 5em;
+  height: 160px;
+  padding: 2em;
+}
+
+/* Equal-height carousel fix for Why Choose Us */
+#whyChooseUs .owl-stage {
+  display: flex;
+}
+#whyChooseUs .owl-item {
+  display: flex;
+  flex-direction: column;
+}
+#whyChooseUs .item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+#whyChooseUs .team-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-bottom: 0;
+}
+#whyChooseUs .team-choose {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transform: none !important;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: auto;
 }
 i.icon {
   border-radius: 80px;
@@ -4498,4 +4548,178 @@ i.fa-cloud {
 }
 .team-box .team-content .pdtb8 {
   padding: 8px 0;
+}
+
+/* ── Why Choose Us carousel overrides ── */
+#whyChooseUs .team-box {
+  padding: 0;
+  overflow: visible;
+}
+#whyChooseUs .team-box::before {
+  display: none;
+}
+#whyChooseUs .team-choose {
+  position: relative;
+  transform: none;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  padding: 20px 1.25rem 28px;
+}
+
+/* Mobile spacing fix for About section image */
+@media (max-width: 767px) {
+  #our-feature .image {
+    margin-top: 35px !important;
+    margin-bottom: 10px !important;
+  }
+
+  #our-feature .button {
+    margin-bottom: 10px;
+  }
+}
+
+
+/* Mobile spacing adjustment for work process items */
+@media (max-width: 767px) {
+  .process-wrapp li {
+    padding: 35px 10px 0 10px;
+  }
+}
+
+/* Mobile spacing adjustment for funfacts counters */
+@media (max-width: 767px) {
+  #funfacts .icon-counters {
+    margin-bottom: 20px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #funfacts .icon-counters:first-child {
+    margin-top: 0 !important;
+  }
+
+  #funfacts .col-md-7 .row {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  #funfacts .img-icon {
+    margin-bottom: 8px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #our-process {
+    padding-bottom: 30px !important;
+  }
+  #services-sec {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+}
+
+
+/* Mobile spacing adjustment between funfacts header and counters */
+@media (max-width: 767px) {
+  #funfacts .margin_bottom.whitecolor.text-md-start {
+    margin-bottom: 10px !important;
+  }
+  #funfacts .margin_bottom.whitecolor.text-md-start p.title {
+    margin-bottom: 0 !important;
+  }
+  #funfacts .col-md-7.col-sm-12.text-center {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  #funfacts .col-md-7 > .row {
+    margin-top: 0 !important;
+  }
+  #why-sec .heading-title p.heading_space {
+    margin-bottom: 20px !important;
+  }
+}
+
+/* Mobile spacing adjustment between Tech Stack and Why Choose Us */
+@media (max-width: 767px) {
+  #tech-sec {
+    padding-bottom: 40px !important;
+  }
+
+  #why-sec {
+    padding-top: 40px !important;
+    padding-bottom: 50px !important;
+  }
+}
+
+/* Mobile top padding reduction for sections */
+@media (max-width: 767px) {
+  #our-process {
+    padding-top: 40px !important;
+  }
+
+  #funfacts {
+    padding-top: 40px !important;
+  }
+
+  #our-testimonial {
+    padding-top: 40px !important;
+  }
+
+  /* About Us section top padding reduction */
+  #our-feature {
+    padding-top: 40px !important;
+    padding-bottom: 50px !important;
+  }
+
+  /* Tech Stack section top padding */
+  #tech-sec {
+    padding-top: 65px !important;
+  }
+
+  /* Contact section (bottom-most) top padding reduction */
+  #contactus {
+    padding-top: 20px !important;
+  }
+}
+
+/* Mobile spacing: contact info column bottom padding after Get Directions removal */
+@media (max-width: 767px) {
+  #contactus .col-md-5.margin_bottom {
+    margin-bottom: 32px !important;
+  }
+}
+
+/* Mobile spacing reduction for contact/map/footer sections */
+@media (max-width: 767px) {
+  /* Reduce large gap between Send Message and Find Our Office */
+  #contactus .col-md-7.margin_bottom {
+    margin-bottom: 28px !important;
+  }
+
+  /* Reduce large gap between Find Our Office block and the map */
+  #contactus .col-md-6.margin_bottom {
+    margin-bottom: 20px !important;
+  }
+
+  /* Tighten the address/Get Directions inner spacing */
+  #contactus .our-address.top20.bottom30 {
+    margin-top: 10px !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* Reduce spacing between map and footer */
+  #contactus {
+    padding-bottom: 20px !important;
+  }
+}
+
+/* Mobile: reduce padding between tech stack header and items */
+@media (max-width: 767px) {
+  #tech-sec .heading_space {
+    margin-bottom: 16px !important;
+  }
+  #tech-sec .tech-grid {
+    margin-top: 16px !important;
+  }
 }

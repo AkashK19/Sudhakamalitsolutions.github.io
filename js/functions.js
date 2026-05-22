@@ -136,6 +136,11 @@ jQuery(function ($) {
         ($(".side-menu").removeClass("side-menu-active"),
           $("#close_side_menu").fadeOut(200),
           $(".pushwrap").removeClass("active"));
+      }),
+      $(".side-menu .navbar-nav a").on("click", function () {
+        $(".side-menu").removeClass("side-menu-active");
+        $("#close_side_menu").fadeOut(200);
+        $(".pushwrap").removeClass("active");
       }));
   }
 

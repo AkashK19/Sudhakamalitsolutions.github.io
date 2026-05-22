@@ -1,8 +1,8 @@
 /*Bootstrap CSS*/
 @import "bootstrap.min.css";
 
-/*FontAwesome*/
-@import "font-awesome.min.css";
+/*FontAwesome - loaded via CDN (FA 6.5.1) in index.html*/
+/* @import "font-awesome.min.css"; removed - conflicts with FA6 fab icons */
 
 /*Animate css*/
 @import "animate.min.css";
