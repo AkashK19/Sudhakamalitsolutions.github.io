@@ -6,17 +6,25 @@
 <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
 <meta content="Sudhakamal IT Solutions Pvt. Ltd. – Delivering end-to-end technology solutions including Web &amp; Mobile Development, Oracle Integration Cloud, AWS, QA Automation, AI &amp; ML, and IT Staff Augmentation." name="description"/>
 <title>Sudhakamal IT Solutions Pvt. Ltd. | End-to-End IT Services</title>
-<link href="images/favicon.png" rel="icon" type="image/png"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png"/>
+<link rel="shortcut icon" href="favicon.ico"/>
 <link href="css/plugins.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 <link href="css/style.css" rel="stylesheet"/>
 <style>
-      .navbar-brand { width: 220px !important; }
-      .navbar-brand img { max-height: 90px !important; width: 100% !important; height: auto !important; object-fit: contain; }
+      .navbar-brand { width: 220px !important; display: flex !important; align-items: center !important; gap: 10px !important; }
+      .navbar-brand .logo-icon { height: 52px !important; width: auto !important; flex-shrink: 0; }
+      .navbar-brand .logo-text { height: 44px !important; width: auto !important; }
       .ticker-wrap { background: #1655a2; padding: 11px 0; overflow: hidden; }
-      .ticker { display: flex; white-space: nowrap; animation: ticker-scroll 45s linear infinite; }
-      .ticker-item { padding: 0 28px; color: #fff; font-weight: 600; font-size: 0.85rem; opacity: 0.92; }
+      .ticker { display: inline-flex; flex-wrap: nowrap; flex-shrink: 0; animation: ticker-scroll 40s linear infinite; will-change: transform; }
+      .ticker-item { display: inline-block; flex-shrink: 0; white-space: nowrap; padding: 0 28px; color: #fff; font-weight: 600; font-size: 0.85rem; opacity: 0.92; }
       .ticker-item::after { content: '◆'; margin-left: 28px; opacity: 0.4; }
-      @keyframes ticker-scroll { 0&#37; { transform: translateX(0); } 100&#37; { transform: translateX(-50&#37;); } }
+      @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+      @media (max-width: 767px) {
+        .ticker { animation: ticker-scroll 20s linear infinite; }
+        .ticker-item { padding: 0 14px; font-size: 0.78rem; }
+      }
       .cin-bar { background: #f0f5ff; border-left: 4px solid #1655a2; padding: 12px 18px; border-radius: 0 8px 8px 0; margin-top: 22px; font-size: 0.83rem; color: #444; }
       .svc-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 14px; }
       .svc-tags span { background: #eef2ff; color: #1655a2; border-radius: 4px; padding: 3px 8px; font-size: 10.5px; font-weight: 700; }
@@ -24,34 +32,48 @@
       .tech-badge { background: #f5f7fa; border: 1.5px solid #dde3ed; border-radius: 8px; padding: 11px 20px; font-weight: 700; font-size: 0.85rem; color: #2c3e50; display: flex; align-items: center; gap: 8px; transition: all 0.2s; }
       .tech-badge:hover { background: #1655a2; color: #fff; border-color: #1655a2; }
       .test-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 42px; }
-      /* comment-box styles */
-      .comment-thread { display: flex; flex-direction: row; gap: 24px; margin-top: 42px; align-items: flex-start; }
-      .comment-item { display: flex; flex-direction: row; align-items: flex-start; gap: 20px; flex: 1; opacity: 0; transform: translateY(40px) rotateX(10deg); transition: opacity 0.7s ease, transform 0.7s ease; padding-bottom: 16px; padding-top: 26px; }
-      .comment-item.card-visible { opacity: 1; transform: translateY(0) rotateX(0); }
-      .comment-item:nth-child(1) { transition-delay: 0.0s; }
-      .comment-item:nth-child(2) { transition-delay: 0.15s; }
-      .comment-item:nth-child(3) { transition-delay: 0.3s; }
-      .comment-avatar { width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; color: #fff; background: linear-gradient(135deg, #423f9c, #862359); box-shadow: 0 3px 10px rgba(0,0,0,0.2); transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); margin-top: -26px; }
+      /* ── Testimonial Slider — continuous marquee band ── */
+      .comment-slider-wrapper { position: relative; margin-top: 42px; overflow: hidden; }
+      .comment-slider-viewport { overflow: visible; }
+      .comment-track { display: flex; width: max-content; animation: reviewScroll 28s linear infinite; will-change: transform; }
+      .comment-track:hover { animation-play-state: paused; }
+      @keyframes reviewScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+      .comment-item { display: flex; flex-direction: row; align-items: flex-start; gap: 20px; flex: 0 0 380px; width: 380px; padding: 30px 16px 20px; box-sizing: border-box; }
+      .comment-avatar { width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; color: #fff; background: linear-gradient(135deg, #423f9c, #862359); box-shadow: 0 3px 10px rgba(0,0,0,0.2); transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1); }
       .comment-item:nth-child(even) .comment-avatar { background: linear-gradient(135deg, #00e4ce, #00abc9); }
       .comment-item:hover .comment-avatar { transform: scale(1.15) rotate(5deg); box-shadow: 0 5px 20px rgba(0,188,212,0.4); }
-      .comment-bubble { background: #fff; border-radius: 0px 16px 16px 16px; padding: 18px 20px 14px; box-shadow: 0 4px 18px rgba(0,0,0,0.12); position: relative; flex: 1; overflow: visible; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+      .comment-bubble { background: #fff; border-radius: 0px 16px 16px 16px; padding: 18px 20px 14px; box-shadow: 0 4px 18px rgba(0,0,0,0.12); position: relative; flex: 0 1 auto; align-self: flex-start; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
       .comment-bubble::before { content: ''; position: absolute; top: 0px; left: -13px; width: 0; height: 0; border-style: solid; border-width: 0 14px 14px 0; border-color: transparent #fff transparent transparent; }
       .comment-bubble::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #00bcd4, transparent); transform: scaleX(0); transition: transform 0.6s ease; border-radius: 0 16px 0 0; }
       .comment-item:hover .comment-bubble::after { transform: scaleX(1); }
-      .comment-item:hover .comment-bubble { transform: translateY(-8px) scale(1.02); box-shadow: 0 20px 50px rgba(0,0,0,0.2); }
+      .comment-item:hover .comment-bubble { transform: translateY(-6px) scale(1.01); box-shadow: 0 20px 50px rgba(0,0,0,0.18); }
       .comment-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
       .comment-author { font-weight: 700; font-size: 0.9rem; color: #1a1a2e; }
       .comment-stars { color: #f9a825; font-size: 0.82rem; letter-spacing: 1px; display: inline-block; animation: waveText 2s ease-in-out infinite; }
       .comment-text { font-size: 0.88rem; color: #444; line-height: 1.78; margin: 0 0 10px; font-style: italic; }
       .comment-role { font-size: 0.76rem; color: #888; }
+      .slider-controls { display: none; }
       @media (max-width: 767px) {
-        .comment-thread { flex-direction: column; gap: 16px; margin-top: 28px; }
-        .comment-item { flex: none; width: 100%; padding-top: 20px; padding-bottom: 12px; }
-        .comment-avatar { margin-top: -20px; width: 46px; height: 46px; font-size: 0.82rem; }
+        .comment-item { flex: 0 0 300px; width: 300px; gap: 14px; padding: 22px 10px 14px; }
+        .comment-avatar { width: 46px; height: 46px; font-size: 0.82rem; }
         .comment-item:hover .comment-bubble { transform: none; box-shadow: 0 4px 18px rgba(0,0,0,0.12); }
         .comment-meta { flex-wrap: wrap; gap: 4px; }
         .comment-text { font-size: 0.86rem; }
+        .comment-track { animation-duration: 22s; }
       }
+      
+      @media (max-width: 767px) {
+        #our-testimonial { padding-bottom: 40px !important; }
+        #contactus { padding-top: 10px !important; }
+        #contactus .our-address.top20.bottom30 { margin-bottom: 10px !important; }
+
+        /* Reduce gap between subtitle and first counter item */
+        #funfacts .col-md-5.col-sm-12.margin_bottom { margin-bottom: 8px !important; }
+        #funfacts .col-md-5.col-sm-12.margin_bottom p.title { margin-bottom: 0 !important; }
+        #funfacts .col-md-7.col-sm-12 { margin-top: 0 !important; padding-top: 0 !important; }
+        #funfacts .col-md-7.col-sm-12 > .row { margin-top: 0 !important; }
+      }
+
       @media (min-width: 992px) { .navbar-toggler { display: none !important; } }
       .ci-item { display:flex; align-items:flex-start; gap:15px; margin-bottom:24px; }
       .ci-icon { width:42px; height:42px; background:#1655a2; border-radius:9px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1rem; flex-shrink:0; }
@@ -63,8 +85,103 @@
 
       .footer-dark { background: #0f1628; }
       .footer-dark a { text-decoration: none; }
-    </style>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+      /* Contact form — animated underline on focus */
+      .getin_form .form-group { position: relative; }
+      .getin_form .form-control {
+        outline: none !important;
+        box-shadow: none !important;
+        border-color: transparent !important;
+        border-bottom: 1px solid #d0d0d0 !important;
+        transition: border-color 0.3s ease !important;
+        background: transparent;
+      }
+      .getin_form .form-control:focus {
+        outline: none !important;
+        box-shadow: none !important;
+        border-color: transparent !important;
+        border-bottom: 1px solid #d0d0d0 !important;
+      }
+      /* Custom select arrow */
+      .select-wrapper {
+        position: relative;
+        display: block;
+      }
+      .select-wrapper select.form-control {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding-right: 36px !important;
+        cursor: pointer;
+      }
+      .select-arrow {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+      .select-wrapper.open .select-arrow {
+        color: #1655a2;
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      /* Animated underline pseudo-element */
+      .getin_form .form-group::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #1655a2, #00bcd4);
+        border-radius: 2px;
+        transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+      }
+      .getin_form .form-group:focus-within::after {
+        width: 100%;
+      }
+    
+      @media (max-width: 767px) {
+        .footer-mobile-row {
+          display: flex !important;
+          flex-wrap: nowrap !important;
+          gap: 10px !important;
+        }
+        .footer-mobile-half {
+          width: 50% !important;
+          max-width: 50% !important;
+          flex: 0 0 50% !important;
+        }
+      }
+
+
+      @media (max-width: 767px) {
+        footer .margin_bottom {
+          margin-bottom: 20px !important;
+        }
+
+        footer h3,
+        footer h2 {
+          margin-bottom: 12px !important;
+        }
+
+        footer ul li,
+        footer p {
+          margin-bottom: 7px !important;
+          line-height: 1.4 !important;
+        }
+
+        footer .footer-mobile-row {
+          gap: 8px !important;
+        }
+      }
+
+</style>
 <link href="css/enhanced-animations.css" rel="stylesheet"/>
 <style>
 .service-box i{
@@ -96,7 +213,11 @@
 }
 /* Coloured icon band at top — alternating gradient_bg / gradient_bg_default */
 #services-slider-deliver .svc-icon-band {
-  padding: 22px 0 18px;
+  padding: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 #services-slider-deliver .owl-item:nth-child(odd)  .svc-icon-band { background: linear-gradient(90deg, #423f9c 31%, #862359 69%); }
@@ -157,7 +278,7 @@
 @keyframes slideFadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
 @keyframes ripple{0%{transform:scale(0);opacity:1}100%{transform:scale(4);opacity:0}}
 .navbar,.gradient-btn,.price-table,.footer_social li a,.owl-carousel .item,img{transition:all .35s ease-in-out;}
-.price-table:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,0,0,.15)}
+.price-table:hover{}
 .gradient-btn:hover,.button:hover{transform:scale(1.05)}
 .footer_social li a:hover{transform:translateY(-6px) rotate(6deg)}
 .hero-content, .heading-title{animation:slideFadeUp 1s ease both;}
@@ -166,6 +287,9 @@
 section{scroll-behavior:smooth;}
 .reveal-on-scroll{opacity:0;transform:translateY(40px);transition:all .8s ease;}
 .reveal-on-scroll.active{opacity:1;transform:translateY(0);}
+</style>
+<style>
+#contactus{padding-bottom:40px !important;}
 </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNav">
@@ -185,7 +309,8 @@ section{scroll-behavior:smooth;}
 <nav class="navbar navbar-expand-lg transparent-bg static-nav" id="mainNav">
 <div style="position:absolute;inset:0;background:rgba(10,20,40,0.58);"></div><div class="container" style="position:relative;z-index:2;">
 <a class="navbar-brand" href="index.html">
-<img alt="Sudhakamal IT Solutions" src="images/sudhakamal-logo.png"/>
+<img alt="Sudhakamal IT Solutions" class="logo-icon" src="images/sudhakamal-logo-icon.png"/>
+<img alt="Sudhakamal IT Solutions" class="logo-text" src="images/sudhakamal-logo-text.png"/>
 </a>
 <div class="collapse navbar-collapse" id="navLinks">
 <ul class="navbar-nav ms-auto">
@@ -253,7 +378,7 @@ section{scroll-behavior:smooth;}
 
 <!--Some Services-->
 <div class="container">
-  <div class="row">
+  <div class="row footer-mobile-row">
     <div class="col-md-12">
       <div id="services-slider" class="owl-carousel">
         <div class="item">
@@ -503,7 +628,7 @@ section{scroll-behavior:smooth;}
 <div class="col-md-7 col-sm-12 text-center">
 <div class="row">
 <div class="col-md-4 col-sm-4 icon-counters whitecolor margin_bottom wow fadeInUp" data-wow-delay="350ms">
-<div class="img-icon bottom15"><i class="fa fa-smile-o"></i></div>
+<div class="img-icon bottom15"><i class="fa-regular fa-face-smile" style="font-size:2rem;"></i></div>
 <div class="counters"><span class="count_nums" data-speed="2500" data-to="100"></span><i class="fa fa-percent"></i></div>
 <p class="title">Client Satisfaction</p>
 </div>
@@ -667,44 +792,85 @@ section{scroll-behavior:smooth;}
 </div>
 </div>
 </div>
-<div class="comment-thread wow fadeInUp" data-wow-delay="400ms">
+<div class="comment-slider-wrapper wow fadeInUp" data-wow-delay="400ms" id="testimonialSlider">
+  <div class="comment-slider-viewport">
+  <div class="comment-track" id="commentTrack">
 
-  <div class="comment-item">
-    <div class="comment-avatar">GM</div>
-    <div class="comment-bubble">
-      <div class="comment-meta">
-        <span class="comment-author">Gourav Mourya</span>
-        <span class="comment-stars">★★★★☆</span>
+    <div class="comment-item">
+      <div class="comment-avatar">GM</div>
+      <div class="comment-bubble">
+        <div class="comment-meta">
+          <span class="comment-author">Gourav Mourya</span>
+          <span class="comment-stars">★★★★☆</span>
+        </div>
+        <p class="comment-text">The team provided highly skilled resources on short notice. Their QA automation professionals integrated seamlessly with our internal teams and delivered outstanding results.</p>
+        <span class="comment-role">Founder &amp; Director, Crystaltech Services Pvt. Ltd.</span>
       </div>
-      <p class="comment-text">The team provided highly skilled resources on short notice. Their QA automation professionals integrated seamlessly with our internal teams and delivered outstanding results.</p>
-      <span class="comment-role">Founder &amp; Director, Crystaltech Services Pvt. Ltd.</span>
     </div>
-  </div>
 
-  <div class="comment-item">
-    <div class="comment-avatar">HD</div>
-    <div class="comment-bubble">
-      <div class="comment-meta">
-        <span class="comment-author">Hrishikesh Diwate</span>
-        <span class="comment-stars">★★★★★</span>
+    <div class="comment-item">
+      <div class="comment-avatar">HD</div>
+      <div class="comment-bubble">
+        <div class="comment-meta">
+          <span class="comment-author">Hrishikesh Diwate</span>
+          <span class="comment-stars">★★★★★</span>
+        </div>
+        <p class="comment-text">Sudhakamal IT Solutions delivered exactly what we needed. Their technical expertise, responsiveness, and commitment to quality exceeded our expectations at every stage.</p>
+        <span class="comment-role">Managing Director, Zenrax Consultancy Services Pvt. Ltd.</span>
       </div>
-      <p class="comment-text">Sudhakamal IT Solutions delivered exactly what we needed. Their technical expertise, responsiveness, and commitment to quality exceeded our expectations at every stage.</p>
-      <span class="comment-role">Managing Director, Zenrax Consultancy Services Pvt. Ltd.</span>
     </div>
-  </div>
 
-  <div class="comment-item">
-    <div class="comment-avatar">AP</div>
-    <div class="comment-bubble">
-      <div class="comment-meta">
-        <span class="comment-author">Anuj Patharkar</span>
-        <span class="comment-stars">★★★★★</span>
+    <div class="comment-item">
+      <div class="comment-avatar">AP</div>
+      <div class="comment-bubble">
+        <div class="comment-meta">
+          <span class="comment-author">Anuj Patharkar</span>
+          <span class="comment-stars">★★★★★</span>
+        </div>
+        <p class="comment-text">Sudhakamal IT Solutions delivered exceptional technical expertise and end-to-end support for our solar project, along with reliable cloud and application development services. Their professionalism made them a trusted technology partner.</p>
+        <span class="comment-role">Founder, Shivoham Energies &amp; Solutions</span>
       </div>
-      <p class="comment-text">Sudhakamal IT Solutions delivered exceptional technical expertise and end-to-end support for our solar project, along with reliable cloud and application development services. Their professionalism made them a trusted technology partner.</p>
-      <span class="comment-role">Founder, Shivoham Energies &amp; Solutions</span>
     </div>
-  </div>
 
+    <!-- Duplicate set for seamless infinite loop -->
+    <div class="comment-item">
+      <div class="comment-avatar">GM</div>
+      <div class="comment-bubble">
+        <div class="comment-meta">
+          <span class="comment-author">Gourav Mourya</span>
+          <span class="comment-stars">★★★★☆</span>
+        </div>
+        <p class="comment-text">The team provided highly skilled resources on short notice. Their QA automation professionals integrated seamlessly with our internal teams and delivered outstanding results.</p>
+        <span class="comment-role">Founder &amp; Director, Crystaltech Services Pvt. Ltd.</span>
+      </div>
+    </div>
+
+    <div class="comment-item">
+      <div class="comment-avatar">HD</div>
+      <div class="comment-bubble">
+        <div class="comment-meta">
+          <span class="comment-author">Hrishikesh Diwate</span>
+          <span class="comment-stars">★★★★★</span>
+        </div>
+        <p class="comment-text">Sudhakamal IT Solutions delivered exactly what we needed. Their technical expertise, responsiveness, and commitment to quality exceeded our expectations at every stage.</p>
+        <span class="comment-role">Managing Director, Zenrax Consultancy Services Pvt. Ltd.</span>
+      </div>
+    </div>
+
+    <div class="comment-item">
+      <div class="comment-avatar">AP</div>
+      <div class="comment-bubble">
+        <div class="comment-meta">
+          <span class="comment-author">Anuj Patharkar</span>
+          <span class="comment-stars">★★★★★</span>
+        </div>
+        <p class="comment-text">Sudhakamal IT Solutions delivered exceptional technical expertise and end-to-end support for our solar project, along with reliable cloud and application development services. Their professionalism made them a trusted technology partner.</p>
+        <span class="comment-role">Founder, Shivoham Energies &amp; Solutions</span>
+      </div>
+    </div>
+
+  </div><!-- /.comment-track -->
+  </div><!-- /.comment-slider-viewport -->
 </div>
 </div>
 </section>
@@ -760,7 +926,6 @@ section{scroll-behavior:smooth;}
 </div>
 </div>
 </div>
-<a class="button btnsecondary top10" href="https://www.google.com/maps/dir//Sudhakamal+IT+Solutions+Private+Limited" target="_blank">📍 Get Directions</a>
 </div>
 <div class="col-md-7 col-sm-12 margin_bottom wow fadeInRight" data-wow-delay="350ms">
 <form class="getin_form" id="contactForm" onsubmit="sendEmail(event)">
@@ -788,8 +953,9 @@ section{scroll-behavior:smooth;}
 </div>
 <div class="col-md-12 col-sm-12">
 <div class="form-group bottom35">
+<div class="select-wrapper">
 <select class="form-control" id="service" name="service">
-<option value="">Service Interested In...</option>
+<option value="">Service Interested In:</option>
 <option>Web &amp; Mobile Development</option>
 <option>Oracle Integration Cloud (OIC)</option>
 <option>Cloud &amp; AWS Solutions</option>
@@ -798,6 +964,10 @@ section{scroll-behavior:smooth;}
 <option>IT Staff Augmentation</option>
 <option>Other / General Inquiry</option>
 </select>
+<span class="select-arrow">
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+</span>
+</div>
 </div>
 </div>
 <div class="col-md-12 col-sm-12">
@@ -883,22 +1053,58 @@ section{scroll-behavior:smooth;}
 </div>
 <!-- Map -->
 <div class="row">
-<div class="col-md-6 col-sm-12 margin_bottom wow fadeInUp" data-wow-delay="300ms">
-<div class="col-sm-12 our-address">
-<h5 class="bottom25">Find Our Office</h5>
-<p>We're located near Pune International Airport in Lohegaon — easily accessible from across Pune and Pimpri-Chinchwad.</p>
-</div>
-<div class="row">
-<div class="col-md-8 col-sm-6 our-address top20 bottom30">
-<p class="contact-table bottom20">Siddhivinayak Complex, Office No.06, Wadgaon Shinde Road, Opp. Kasegaon College, Near MMIT College &amp; Pune International Airport, Lohegaon, Pune – 411047</p>
-<a href="https://www.google.com/maps/dir//Sudhakamal+IT+Solutions+Private+Limited" target="_blank" class="button btnsecondary wow fadeInUp" data-text="Get Directions">📍 Get Directions</a>
-</div>
-</div>
-</div>
-<div class="col-md-6 col-sm-12 margin_bottom wow fadeInUp" data-wow-delay="350ms">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.3!2d73.90!3d18.58!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDM0JzQ5LjMiTiA3M8KwNTMnNTQuMiJF!5e0!3m2!1sen!2sin!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Sudhakamal IT Solutions Office Location" style="height:320px;width:100%;border:0;border-radius:8px;"></iframe>
-</div>
-</div>
+
+    <div class="col-md-6 col-sm-12 our-address top20 bottom30">
+        <p class="contact-table bottom20">
+            Sudhakamal IT Solutions,<br>
+            Siddhivinayak Complex, Office No. 06,<br>
+            Wadgaon Shinde Road, Opp. Kasegaon College,<br>
+            Near MMIT College & Pune International Airport,<br>
+            Lohegaon, Pune – 411047
+        </p>
+
+        <a href="https://maps.app.goo.gl/JKSTEcMdtZwjowg78"
+           target="_blank"
+           class="button btnsecondary wow fadeInUp"
+           data-text="Get Directions">
+            📍 Get Directions
+        </a>
+    </div>
+
+    <div class="col-md-6 col-sm-12 margin_bottom wow fadeInUp" data-wow-delay="350ms">
+
+        <div style="position:relative;height:320px;width:100%;border-radius:8px;overflow:hidden;">
+
+            <iframe
+                src="https://maps.google.com/maps?q=18.6098,73.9388&z=14&output=embed"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Sudhakamal IT Solutions Office Location"
+                style="height:100%;width:100%;border:0;">
+            </iframe>
+
+            <a href="https://maps.app.goo.gl/W5Ne3fn2pNtUEsPRA"
+               target="_blank"
+               style="position:absolute;top:10px;left:10px;background:#fff;color:#1a73e8;font-size:0.75rem;font-weight:700;padding:7px 12px;border-radius:4px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;gap:5px;z-index:10;">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="13"
+                     height="13"
+                     viewBox="0 0 24 24"
+                     fill="#EA4335"
+                     style="flex-shrink:0;">
+
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+
+                Open in Maps
+            </a>
+
+        </div>
+
+    </div>
+
 </div>
 </section>
 <!-- Footer -->
@@ -906,13 +1112,16 @@ section{scroll-behavior:smooth;}
 <div class="container">
 <div class="row">
 <div class="col-md-4 col-sm-12 margin_bottom">
-<img alt="Sudhakamal IT Solutions" src="images/sudhakamal-logo.png" style="max-height:62px;margin-bottom:16px;"/>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+<img alt="Sudhakamal IT Solutions" src="images/sudhakamal-logo-icon.png" style="height:52px;width:auto;"/>
+<img alt="Sudhakamal IT Solutions" src="images/sudhakamal-logo-text.png" style="height:44px;width:auto;"/>
+</div>
 <p class="whitecolor" style="opacity:0.65;font-size:0.87rem;line-height:1.82;">
               Delivering end-to-end technology solutions with innovation, scalability, and skilled IT professionals — empowering your IT journey from Pune, India.
             </p>
 <p class="whitecolor" style="opacity:0.38;font-size:0.76rem;margin-top:12px;">CIN: U62012PN2025PTC243363 · ROC Pune, Maharashtra</p>
 </div>
-<div class="col-md-2 col-sm-6 margin_bottom">
+<div class="col-md-2 col-sm-6 margin_bottom footer-mobile-half">
 <h6 class="whitecolor bottom20" style="font-weight:700;font-size:0.88rem;text-transform:uppercase;letter-spacing:0.5px;">Services</h6>
 <ul style="list-style:none;padding:0;margin:0;">
 <li style="margin-bottom:9px;"><a class="whitecolor pagescroll" href="#services-sec" style="opacity:0.6;font-size:0.84rem;">Web &amp; Mobile Dev</a></li>
@@ -923,7 +1132,7 @@ section{scroll-behavior:smooth;}
 <li style="margin-bottom:9px;"><a class="whitecolor pagescroll" href="#services-sec" style="opacity:0.6;font-size:0.84rem;">Staff Augmentation</a></li>
 </ul>
 </div>
-<div class="col-md-2 col-sm-6 margin_bottom">
+<div class="col-md-2 col-sm-6 margin_bottom footer-mobile-half">
 <h6 class="whitecolor bottom20" style="font-weight:700;font-size:0.88rem;text-transform:uppercase;letter-spacing:0.5px;">Company</h6>
 <ul style="list-style:none;padding:0;margin:0;">
 <li style="margin-bottom:9px;"><a class="whitecolor pagescroll" href="#our-feature" style="opacity:0.6;font-size:0.84rem;">About Us</a></li>
@@ -944,17 +1153,14 @@ section{scroll-behavior:smooth;}
 </div>
 <hr style="border-color:rgba(255,255,255,0.08);margin:28px 0 18px;"/>
 <div class="social-icons" style="margin:20px 0;text-align:center;">
-<a href="https://www.linkedin.com/company/sudhakamal-it-solutions-pvt-ltd/" target="_blank">
+<a href="https://www.linkedin.com/company/sudhakamal-it-solutions-pvt-ltd/" target="_blank" title="LinkedIn" aria-label="LinkedIn">
 <i class="fab fa-linkedin-in"></i>
 </a>
-<a href="#">
-<i class="fab fa-facebook-f"></i>
-</a>
-<a href="#">
+<a href="https://www.instagram.com/sudhakamal_it_solutions_pvt_lt/" target="_blank" title="Instagram" aria-label="Instagram">
 <i class="fab fa-instagram"></i>
 </a>
-<a href="#">
-<i class="fab fa-x-twitter"></i>
+<a href="https://wa.me/917709603645" target="_blank" title="WhatsApp" aria-label="WhatsApp">
+<i class="fab fa-whatsapp"></i>
 </a>
 </div>
 <hr style="border-color:rgba(255,255,255,0.08);margin:18px 0;"/>
@@ -985,6 +1191,31 @@ document.addEventListener('DOMContentLoaded',function(){
   document.querySelectorAll('section, .price-table, .heading-title').forEach(function(el){el.classList.add('reveal-on-scroll');});
   const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('active');}})},{threshold:0.15});
   document.querySelectorAll('.reveal-on-scroll').forEach(el=>observer.observe(el));
+
+  // Dropdown arrow rotation
+  var sel = document.getElementById('service');
+  if (sel) {
+    var wrapper = sel.closest('.select-wrapper');
+    var isOpen = false;
+
+    function openArrow()  { isOpen = true;  wrapper.classList.add('open'); }
+    function closeArrow() { isOpen = false; wrapper.classList.remove('open'); }
+
+    sel.addEventListener('mousedown', function() {
+      // If already open, this click is closing it
+      if (isOpen) { closeArrow(); } else { openArrow(); }
+    });
+    sel.addEventListener('change',  closeArrow);
+    sel.addEventListener('blur',    closeArrow);
+    sel.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeArrow();
+    });
+
+    // Close when clicking anywhere outside the select
+    document.addEventListener('mousedown', function(e) {
+      if (!wrapper.contains(e.target)) closeArrow();
+    });
+  }
 });
 </script>
 <script src="js/enhanced-animations.js"></script>
