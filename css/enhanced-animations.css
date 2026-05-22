@@ -149,7 +149,7 @@
 
 @keyframes lineGrow {
   from { width: 0; }
-  to { width: 60px; }
+  to { width: 44px; }
 }
 
 @keyframes dotPulse {
@@ -1179,10 +1179,10 @@
 
 #wa-float {
   position: fixed;
-  bottom: 90px;
+  bottom: 82px;
   right: 30px;
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   background: #25D366;
   border-radius: 50%;
   display: flex;
@@ -1212,7 +1212,7 @@
 }
 
 #wa-float svg {
-  width: 26px; height: 26px;
+  width: 22px; height: 22px;
   fill: white;
   flex-shrink: 0;
 }
@@ -1283,8 +1283,8 @@
 
 @media (max-width: 768px) {
   .cursor-dot, .cursor-ring { display: none; }
-  #wa-float { bottom: 85px; right: 18px; }
-  #back-to-top-btn { right: 18px; bottom: 25px; }
+  #wa-float { bottom: 92px; right: 30px; }
+  .back-top { right: 30px; bottom: 25px; }
   .hero-grid-overlay { display: none; }
 }
 
